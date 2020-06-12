@@ -1,0 +1,39 @@
+2020-06-10 21:05:11.003 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-06-10 21:05:11.369 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/weatherforecast  
+2020-06-10 21:05:11.490 +05:30 [Information] Hosting environment: "Development"
+2020-06-10 21:05:11.492 +05:30 [Information] Content root path: "D:\Office\Assignment POC\ShoppingCartApp"
+2020-06-10 21:05:11.723 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.WeatherForecastController.Get (ShoppingCartApp)"'
+2020-06-10 21:05:11.803 +05:30 [Information] Route matched with "{action = \"Get\", controller = \"WeatherForecast\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.WeatherForecast] Get()" on controller "ShoppingCartApp.Controllers.WeatherForecastController" ("ShoppingCartApp").
+2020-06-10 21:05:11.821 +05:30 [Information] Executing ObjectResult, writing value of type '"ShoppingCartApp.WeatherForecast[]"'.
+2020-06-10 21:05:12.025 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.WeatherForecastController.Get (ShoppingCartApp)" in 195.4615ms
+2020-06-10 21:05:12.046 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.WeatherForecastController.Get (ShoppingCartApp)"'
+2020-06-10 21:05:12.058 +05:30 [Information] Request finished in 725.7404ms 200 application/json; charset=utf-8
+2020-06-10 21:05:13.583 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/favicon.ico  
+2020-06-10 21:05:13.747 +05:30 [Information] Request finished in 165.9079ms 404 
+2020-06-10 21:05:37.396 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-06-10 21:05:37.399 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)"'
+2020-06-10 21:05:37.470 +05:30 [Information] Route matched with "{action = \"Get\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] Get()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-06-10 21:05:38.052 +05:30 [Information] Completed : Getting all Book Products
+2020-06-10 21:05:39.250 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-06-10 21:05:42.215 +05:30 [Information] Executed DbCommand ("187"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-06-10 21:05:42.374 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-06-10 21:05:42.393 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)" in 4922.3659ms
+2020-06-10 21:05:42.393 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)"'
+2020-06-10 21:05:42.404 +05:30 [Information] Request finished in 5008.6691ms 200 application/json; charset=utf-8
+2020-06-10 21:06:55.591 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-06-10 21:06:55.648 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-06-10 21:06:55.709 +05:30 [Information] Hosting environment: "Development"
+2020-06-10 21:06:55.710 +05:30 [Information] Content root path: "D:\Office\Assignment POC\ShoppingCartApp"
+2020-06-10 21:06:55.791 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)"'
+2020-06-10 21:06:55.841 +05:30 [Information] Route matched with "{action = \"Get\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] Get()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-06-10 21:06:56.022 +05:30 [Information] Completed : Getting all Book Products
+2020-06-10 21:06:57.068 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-06-10 21:06:58.764 +05:30 [Information] Executed DbCommand ("160"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-06-10 21:06:58.976 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-06-10 21:06:59.053 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)" in 3195.0483ms
+2020-06-10 21:06:59.054 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.Get (ShoppingCartApp)"'
+2020-06-10 21:06:59.067 +05:30 [Information] Request finished in 3438.378ms 200 application/json; charset=utf-8
