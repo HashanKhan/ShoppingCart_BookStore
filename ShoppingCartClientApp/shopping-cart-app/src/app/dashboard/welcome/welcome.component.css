@@ -1,0 +1,17 @@
+.container{
+    background-image: url('/assets/project_images/Welcome.jpg');
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.container-text {
+    text-align: right;
+    position: absolute;
+    top: 15%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    color: white;
+}

@@ -1,0 +1,39 @@
+<!--Toolbar-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>&nbsp;&nbsp;&nbsp;
+    <h1>Shopping Cart</h1>
+    <span class="menu-spacer"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <div>
+      <a [routerLink]="'/shoppingCart/books'"><mat-icon style="color: aliceblue;">home</mat-icon></a>&nbsp;&nbsp;
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <span style="font-size: 12px;">The Shopping Cart will enable Customers to easily track their products and purchase them.</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!--Sidenav-->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <div>
+        <a mat-list-item [routerLink]="'/shoppingCart/books'" (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</a>
+      </div>
+      <!-- <div>
+        <a mat-list-item [routerLink]="'/files/filelist'" (click)="sidenav.toggle()"><mat-icon>file_copy</mat-icon>Files</a>
+      </div>
+      <div>
+        <a mat-list-item [routerLink]="'/reports/reportlist'" (click)="sidenav.toggle()"><mat-icon>file_copy</mat-icon>Reports</a>
+      </div> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
