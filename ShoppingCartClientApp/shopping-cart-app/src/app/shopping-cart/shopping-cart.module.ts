@@ -13,10 +13,12 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
-  declarations: [BookListComponent],
+  declarations: [BookListComponent, CartComponent],
   imports: [
     CommonModule,
     ShoppingCartRoutingModule,
@@ -29,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule
   ]
 })
 export class ShoppingCartModule { }

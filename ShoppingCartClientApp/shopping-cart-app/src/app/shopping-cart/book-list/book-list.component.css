@@ -10,24 +10,34 @@
 table {
     width: 90%;
     margin-left: 5%;
+    margin-right: 5%;
 }
   
 .mat-form-field {
     font-size: 14px; 
-    width: 40%;
+    width: 90%;
     margin-top: 4%;
     margin-left: 5%;
 }
 
 .mat-elevation-z8{
-    margin-top: 2%;
-    width: 50%;
+    margin-top: 1%;
+    width: 100%;
 }
   
 td, th {
-    width: 10%;
+    width: 5%;
 }
 
 img{
     height: 20%;
 }
+
+.mat-divider{
+   display: block;
+   margin: 0;
+   border-top-width: 3px;
+   border-top-style: solid;
+   margin-top: 1%;
+}
+

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ShoppingCartApp.Domain.Services;
 using ShoppingCartApp.Models;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,20 +11,23 @@ namespace ShoppingCartApp.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly ShoppingCartContext _context;
         private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(ILogger<ProductsController> logger, ShoppingCartContext context)
+        private readonly IProductService _productService;
+
+        public ProductsController(ILogger<ProductsController> logger, IProductService productService)
         {
             _logger = logger;
-            _context = context;
+            _productService = productService;
         }
 
         [HttpGet]
-        public IEnumerable<Books> Get()
+        public IEnumerable<Books> GetAll()
         {
-            _logger.LogInformation("Completed : Getting all Book Products");
-            return _context.Books.ToList();
+            //_logger.LogInformation("Completed : Getting all Book Products");
+
+            var products = _productService.GetAll();
+            return products;
         }
     }
 }
