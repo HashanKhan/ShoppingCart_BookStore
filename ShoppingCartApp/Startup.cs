@@ -12,8 +12,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ShoppingCartApp.Domain.Repositories;
+using ShoppingCartApp.Domain.Services;
 using ShoppingCartApp.Extensions;
 using ShoppingCartApp.Models;
+using ShoppingCartApp.Persistence.Repositories;
+using ShoppingCartApp.Services;
 
 namespace ShoppingCartApp
 {
@@ -35,6 +39,10 @@ namespace ShoppingCartApp
             services.AddDbContext<ShoppingCartContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:DbConnection"]));
 
             //services.AddScoped<ShoppingCartContext>();
+
+            //New Scoped Lines.
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
 
             services.AddControllers();
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2QlB1KAvZjRqfBqOREA3pIQrd31TAEKT386Xj1onKAKFTBZ4V9LaQZsBlw7fEyjJreP42vMoGe4fYQt1b6D6DQ==",
+  "dgSpecHash": "sM7oKNvSTsZn3PYGsfJGJDX45vffttF/qViF+WISBXIM6dmH/wjeqv7mWnyjc1SVw2B4cwdc95wV2DR0QzrM4g==",
   "success": true,
-  "projectFilePath": "D:\\Office\\Assignment POC\\ShoppingCartApp\\ShoppingCartApp.csproj",
+  "projectFilePath": "D:\\Office\\ShoppingCart_BookStore\\ShoppingCartApp\\ShoppingCartApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.0.0\\microsoft.aspnetcore.hosting.abstractions.2.0.0.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.0.0\\microsoft.aspnetcore.hosting.server.abstractions.2.0.0.nupkg.sha512",

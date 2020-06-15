@@ -8918,11 +8918,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Office\\Assignment POC\\ShoppingCartApp\\ShoppingCartApp.csproj",
+      "projectUniqueName": "D:\\Office\\ShoppingCart_BookStore\\ShoppingCartApp\\ShoppingCartApp.csproj",
       "projectName": "ShoppingCartApp",
-      "projectPath": "D:\\Office\\Assignment POC\\ShoppingCartApp\\ShoppingCartApp.csproj",
+      "projectPath": "D:\\Office\\ShoppingCart_BookStore\\ShoppingCartApp\\ShoppingCartApp.csproj",
       "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-      "outputPath": "D:\\Office\\Assignment POC\\ShoppingCartApp\\obj\\",
+      "outputPath": "D:\\Office\\ShoppingCart_BookStore\\ShoppingCartApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
