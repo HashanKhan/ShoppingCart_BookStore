@@ -15,7 +15,7 @@ namespace ShoppingCartApp
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
-            .WriteTo.RollingFile("Thecodebuzz-log-{Date}.txt")
+            .WriteTo.RollingFile("ShoppingCart-log-{Date}.txt")
             .CreateLogger();
 
             CreateHostBuilder(args).Build().Run();

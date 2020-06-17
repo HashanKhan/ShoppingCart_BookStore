@@ -1,4 +1,4 @@
-export interface Books {
+export interface CartItem {
     id: number;
     name: string;
     type: string;
@@ -6,4 +6,6 @@ export interface Books {
     price: number;
     stock: number;
     image: string;
+    uuid?: any;
+    remove?: boolean;
 }

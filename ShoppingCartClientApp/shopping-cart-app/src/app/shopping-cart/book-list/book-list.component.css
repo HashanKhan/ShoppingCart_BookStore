@@ -36,8 +36,10 @@ img{
 .mat-divider{
    display: block;
    margin: 0;
-   border-top-width: 3px;
+   border-top-width: 4px;
    border-top-style: solid;
-   margin-top: 1%;
+   margin-top: 2%;
 }
+
+
 
