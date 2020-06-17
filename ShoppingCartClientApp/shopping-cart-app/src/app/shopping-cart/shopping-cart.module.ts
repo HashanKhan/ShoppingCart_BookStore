@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatButtonModule,
     FormsModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
+    MatChipsModule
   ]
 })
 export class ShoppingCartModule { }

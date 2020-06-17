@@ -4,9 +4,22 @@
 }
 
 .total{
-    margin-left: 20%;
+    margin-left: 50%;
+    margin-top: 5%;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    font-size: 16px;
 }
 
 button{
     margin-left: 20%;
+}
+
+.items{
+    display: inline-block;
+}
+
+.cartItems{
+    font-size: 16px;
 }

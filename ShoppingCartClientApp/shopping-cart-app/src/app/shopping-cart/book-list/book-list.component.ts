@@ -4,6 +4,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Books } from '../models/books';
 import { ShoppingCartService } from '../services/shopping-cart.service';
+import { CartItem } from '../models/CartItem';
 
 @Component({
   selector: 'app-book-list',
@@ -14,6 +15,8 @@ export class BookListComponent implements OnInit {
   displayedColumns: string[] = ['name', 'type', 'author', 'price', 'stock', 'image', 'add'];
   dataSource: MatTableDataSource<Books>;
   books: Books[] = [];
+
+  cartState = this.shoppingCartService.state;
 
   value: string = '';
 
@@ -47,9 +50,13 @@ export class BookListComponent implements OnInit {
     });
   }
 
+  //Add Items to Cart
+  addItemToCart(item: CartItem) {
+    this.shoppingCartService.addCartItem(item);
+  }
+
   clear(){
     this.value='';
     this.getAllBooks();
   }
-
 }

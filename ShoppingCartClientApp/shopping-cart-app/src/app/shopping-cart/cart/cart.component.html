@@ -1,16 +1,21 @@
 <div class="cart">
     <!-- Your Shopping Cart: <button mat-flat-button color="accent" role="button" [disabled]="state.cart.length < 1" (click)="checkout()"> -->
-        Your Shopping Cart Items:
-
-        <span class="total">
-            <!-- Total: {{ state.tot.subTot | currency:'USD':'symbol':'1.2-2' }} -->
-            <b>Total: Rs.0.00</b>
-        </span>
-         
-
-        <button mat-flat-button color="accent" role="button" >
-            <mat-icon>shopping_cart</mat-icon>
-             <!-- Checkout {{ state.cart.length }} Item{{ state.cart.length > 1 ? 's' : '' }}</button> -->
-             Checkout 
-        </button>
+        <div class="items">
+            <span class="cartItems">Your Cart Items:</span>
+            <mat-chip-list>
+                <mat-chip *ngFor="let item of state.cart" [removable]="true" (removed)="removeItemsFromCart(item)">{{ item.name }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+            </mat-chip-list> 
+        </div>
+        
+        <div class="total">
+            <strong>Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</strong>
+        
+            <button mat-flat-button color="accent" role="button" [disabled]="state.cart.length < 1">
+                <mat-icon>shopping_cart</mat-icon>
+                Checkout {{ state.cart.length }} Item{{ state.cart.length > 1 ? 's' : '' }}
+            </button>
+        </div>
 </div>
+

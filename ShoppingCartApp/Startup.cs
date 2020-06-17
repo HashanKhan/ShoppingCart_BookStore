@@ -38,8 +38,6 @@ namespace ShoppingCartApp
 
             services.AddDbContext<ShoppingCartContext>(opts => opts.UseSqlServer(Configuration["ConnectionStrings:DbConnection"]));
 
-            //services.AddScoped<ShoppingCartContext>();
-
             //New Scoped Lines.
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
