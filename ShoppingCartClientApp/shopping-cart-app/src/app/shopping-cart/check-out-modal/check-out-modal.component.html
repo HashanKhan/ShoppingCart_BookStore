@@ -1,0 +1,28 @@
+<ng-container *ngIf="(state | async) as state">
+
+<h2>
+    <strong>Checkout Page</strong>
+    <button style="float: right;" mat-icon-button [mat-dialog-close]><mat-icon>cancel</mat-icon></button>
+</h2>
+
+    <p>
+      Review your Cart Items and place your Order.
+    </p>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</mat-card-title>
+      </mat-card-header>
+        <mat-card-actions style="text-align: right;">
+          <button mat-flat-button color="primary" (click)="confirmOrder()">
+            Confirm Order &nbsp;<mat-icon>thumb_up</mat-icon>
+          </button>
+        </mat-card-actions>
+    </mat-card><br>
+
+    <div *ngFor="let item of state.cart">
+      <p>
+        {{ item.name }} &nbsp;<strong>{{ item.price | currency:'LKR ':'symbol':'1.2-2' }}</strong>
+      </p>
+    </div> 
+
+</ng-container>

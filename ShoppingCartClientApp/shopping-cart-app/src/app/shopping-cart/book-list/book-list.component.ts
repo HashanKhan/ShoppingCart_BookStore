@@ -12,7 +12,8 @@ import { CartItem } from '../models/CartItem';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'type', 'author', 'price', 'stock', 'image', 'add'];
+  // displayedColumns: string[] = ['name', 'type', 'author', 'price', 'stock', 'image', 'add'];
+  displayedColumns: string[] = ['name', 'type', 'author', 'price', 'image', 'add'];
   dataSource: MatTableDataSource<Books>;
   books: Books[] = [];
 

@@ -1,5 +1,4 @@
 <div class="cart">
-    <!-- Your Shopping Cart: <button mat-flat-button color="accent" role="button" [disabled]="state.cart.length < 1" (click)="checkout()"> -->
         <div class="items">
             <span class="cartItems">Your Cart Items:</span>
             <mat-chip-list>
@@ -12,7 +11,7 @@
         <div class="total">
             <strong>Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</strong>
         
-            <button mat-flat-button color="accent" role="button" [disabled]="state.cart.length < 1">
+            <button mat-flat-button color="accent" role="button" [disabled]="state.cart.length < 1" (click)="openCheckoutModal()">
                 <mat-icon>shopping_cart</mat-icon>
                 Checkout {{ state.cart.length }} Item{{ state.cart.length > 1 ? 's' : '' }}
             </button>

@@ -16,10 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
+import { CheckOutModalComponent } from './check-out-modal/check-out-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
-  declarations: [BookListComponent, CartComponent],
+  declarations: [BookListComponent, CartComponent, CheckOutModalComponent],
   imports: [
     CommonModule,
     ShoppingCartRoutingModule,
@@ -34,7 +36,8 @@ import {MatChipsModule} from '@angular/material/chips';
     FormsModule,
     HttpClientModule,
     MatDividerModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule
   ]
 })
 export class ShoppingCartModule { }
