@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ShoppingCartApp.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace ShoppingCartApp.Models
         }
 
         public DbSet<Books> Books { get; set; }
+
+        public DbSet<Customers> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

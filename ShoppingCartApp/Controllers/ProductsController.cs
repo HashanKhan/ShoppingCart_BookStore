@@ -24,7 +24,7 @@ namespace ShoppingCartApp.Controllers
         [HttpGet]
         public IEnumerable<Books> GetAll()
         {
-            //_logger.LogInformation("Completed : Getting all Book Products");
+            _logger.LogInformation("Completed : Getting all Book Products");
 
             var products = _productService.GetAll();
             return products;
