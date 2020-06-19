@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoppingCartApp.Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -25,5 +26,6 @@ namespace ShoppingCartApp.Models
 
         public string Image { get; set; }
 
+        public ICollection<OrderDetails> OrderDetails { get; set; }
     }
 }

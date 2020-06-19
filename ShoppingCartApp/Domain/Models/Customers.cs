@@ -28,5 +28,7 @@ namespace ShoppingCartApp.Domain.Models
         public string LoginStatus { get; set; }
 
         public DateTime RegisterDate { get; set; }
+
+        public ICollection<Orders> Orders { get; set; }
     }
 }
