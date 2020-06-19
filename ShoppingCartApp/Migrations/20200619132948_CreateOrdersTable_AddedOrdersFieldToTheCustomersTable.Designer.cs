@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingCartApp.Models;
 
 namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(ShoppingCartContext))]
-    partial class ShoppingCartContextModelSnapshot : ModelSnapshot
+    [Migration("20200619132948_CreateOrdersTable_AddedOrdersFieldToTheCustomersTable")]
+    partial class CreateOrdersTable_AddedOrdersFieldToTheCustomersTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,35 +57,6 @@ namespace ShoppingCartApp.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("ShoppingCartApp.Domain.Models.OrderDetails", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BookID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("OrderID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("SubTotal")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookID");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("OrderDetails");
-                });
-
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.Orders", b =>
                 {
                     b.Property<int>("Id")
@@ -105,36 +78,6 @@ namespace ShoppingCartApp.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("ShoppingCartApp.Domain.Models.Payments", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CustomerName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("OrderID")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("PaymentAmount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<DateTime>("PaymentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("PaymentMethod")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderID")
-                        .IsUnique();
-
-                    b.ToTable("Payments");
                 });
 
             modelBuilder.Entity("ShoppingCartApp.Models.Books", b =>
@@ -219,35 +162,11 @@ namespace ShoppingCartApp.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ShoppingCartApp.Domain.Models.OrderDetails", b =>
-                {
-                    b.HasOne("ShoppingCartApp.Models.Books", "Books")
-                        .WithMany("OrderDetails")
-                        .HasForeignKey("BookID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ShoppingCartApp.Domain.Models.Orders", "Orders")
-                        .WithOne("OrderDetails")
-                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.Orders", b =>
                 {
                     b.HasOne("ShoppingCartApp.Domain.Models.Customers", "Customer")
                         .WithMany("Orders")
                         .HasForeignKey("CustomerId");
-                });
-
-            modelBuilder.Entity("ShoppingCartApp.Domain.Models.Payments", b =>
-                {
-                    b.HasOne("ShoppingCartApp.Domain.Models.Orders", "Orders")
-                        .WithOne("Payments")
-                        .HasForeignKey("ShoppingCartApp.Domain.Models.Payments", "OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -18,6 +18,12 @@ namespace ShoppingCartApp.Models
 
         public DbSet<Customers> Customers { get; set; }
 
+        public DbSet<Orders> Orders { get; set; }
+
+        public DbSet<Payments> Payments { get; set; }
+
+        public DbSet<OrderDetails> OrderDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Books>().HasData(new Books
