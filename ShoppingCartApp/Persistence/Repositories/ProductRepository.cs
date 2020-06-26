@@ -13,7 +13,7 @@ namespace ShoppingCartApp.Persistence.Repositories
         {
         }
 
-        public IEnumerable<Books> GetAll()
+        public IEnumerable<Books> GetAllProducts()
         {
             return _context.Books.ToList();
         }

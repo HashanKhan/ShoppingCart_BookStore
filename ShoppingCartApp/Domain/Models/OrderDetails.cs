@@ -10,18 +10,16 @@ namespace ShoppingCartApp.Domain.Models
 {
     public class OrderDetails
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
-
         [ForeignKey("Orders")]
-        public int OrderID { get; set; }
+        public int OrderId { get; set; }
 
         [ForeignKey("Books")]
-        public int BookID { get; set; }
+        public int BookId { get; set; }
 
+        [Required]
         public int Quantity { get; set; }
 
+        [Required]
         public decimal SubTotal { get; set; }
 
         public virtual Orders Orders { get; set; }

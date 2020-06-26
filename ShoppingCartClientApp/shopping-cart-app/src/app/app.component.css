@@ -1,3 +1,14 @@
 mat-sidenav{
     width: 15%;
 }
+
+.account{
+    text-align: right;
+    position: absolute;
+    left: 90%;
+}
+
+.signup{
+    color: white;
+    text-decoration: none;
+}

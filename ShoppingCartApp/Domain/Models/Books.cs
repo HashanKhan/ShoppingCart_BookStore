@@ -10,17 +10,21 @@ namespace ShoppingCartApp.Models
 {
     public class Books
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Required]
+        [StringLength(15)]
         public string Type { get; set; }
 
+        [Required]
+        [StringLength(20)]
         public string Author { get; set; }
 
-        public float Price { get; set; }
+        [Required]
+        public decimal Price { get; set; }
 
         public int Stock { get; set; }
 

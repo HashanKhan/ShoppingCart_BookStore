@@ -8,6 +8,6 @@ namespace ShoppingCartApp.Domain.Repositories
 {
     public interface IProductRepository
     {
-        IEnumerable<Books> GetAll();
+        IEnumerable<Books> GetAllProducts();
     }
 }

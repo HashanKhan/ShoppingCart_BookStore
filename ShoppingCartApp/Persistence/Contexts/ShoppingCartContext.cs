@@ -77,6 +77,8 @@ namespace ShoppingCartApp.Models
                 Image = "The Lost World.jpg"
             }
             );
+
+            modelBuilder.Entity<OrderDetails>().HasKey(o => new { o.OrderId, o.BookId });
         }
     }
 }
