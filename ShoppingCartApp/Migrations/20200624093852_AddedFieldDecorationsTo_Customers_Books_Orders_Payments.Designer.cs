@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ShoppingCartApp.Models;
 
 namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(ShoppingCartContext))]
-    partial class ShoppingCartContextModelSnapshot : ModelSnapshot
+    [Migration("20200624093852_AddedFieldDecorationsTo_Customers_Books_Orders_Payments")]
+    partial class AddedFieldDecorationsTo_Customers_Books_Orders_Payments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -66,10 +68,15 @@ namespace ShoppingCartApp.Migrations
 
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.OrderDetails", b =>
                 {
-                    b.Property<int>("OrderId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BookID")
                         .HasColumnType("int");
 
-                    b.Property<int>("BookId")
+                    b.Property<int>("OrderID")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -78,11 +85,11 @@ namespace ShoppingCartApp.Migrations
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("OrderId", "BookId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("BookId");
+                    b.HasIndex("BookID");
 
-                    b.HasIndex("OrderId")
+                    b.HasIndex("OrderID")
                         .IsUnique();
 
                     b.ToTable("OrderDetails");
@@ -238,13 +245,13 @@ namespace ShoppingCartApp.Migrations
                 {
                     b.HasOne("ShoppingCartApp.Models.Books", "Books")
                         .WithMany("OrderDetails")
-                        .HasForeignKey("BookId")
+                        .HasForeignKey("BookID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ShoppingCartApp.Domain.Models.Orders", "Orders")
                         .WithOne("OrderDetails")
-                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderId")
+                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -6,6 +6,6 @@ namespace ShoppingCartApp.Domain.Services
 {
     public interface IProductService
     {
-        IEnumerable<Books> GetAll();
+        IEnumerable<Books> GetAllProducts();
     }
 }

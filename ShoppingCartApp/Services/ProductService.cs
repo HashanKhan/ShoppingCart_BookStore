@@ -17,9 +17,9 @@ namespace ShoppingCartApp.Services
             this._productRepository = productRepository;
         }
 
-        public IEnumerable<Books> GetAll()
+        public IEnumerable<Books> GetAllProducts()
         {
-            return _productRepository.GetAll();
+            return _productRepository.GetAllProducts();
         }
     }
 }

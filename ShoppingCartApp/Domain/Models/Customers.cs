@@ -9,24 +9,33 @@ namespace ShoppingCartApp.Domain.Models
 {
     public class Customers
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
+        [Required]
+        [StringLength(30)]
         public string Name { get; set; }
 
+        [MaxLength(10)]
         public int Phone { get; set; }
 
+        [Required]
         public string Email { get; set; }
 
+        [Required]
         public string Address { get; set; }
 
+        [Required]
+        [StringLength(20)]
         public string UserName { get; set; }
 
+        [Required]
+        [StringLength(20)]
         public string Password { get; set; }
 
-        public string LoginStatus { get; set; }
+        [Required]
+        public bool LoginStatus { get; set; }
 
+        [Required]
         public DateTime RegisterDate { get; set; }
 
         public ICollection<Orders> Orders { get; set; }
