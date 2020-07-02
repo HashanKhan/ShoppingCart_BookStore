@@ -3,7 +3,7 @@ import { DatePipe } from '@angular/common';
 export interface Customers {
     id: number;
     name: string;
-    phone: number;
+    phone: string;
     email: string;
     address: string;
     userName: string;
