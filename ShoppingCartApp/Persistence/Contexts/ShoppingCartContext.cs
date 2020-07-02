@@ -34,7 +34,7 @@ namespace ShoppingCartApp.Models
                 Author = "Martin WickrmaSinghe",
                 Price = 300,
                 Stock = 100,
-                Image = "MadolDoova.jpg"
+                Image = "/assets/book_images/MadolDoova.jpg"
 
             }, new Books
             {
@@ -44,7 +44,7 @@ namespace ShoppingCartApp.Models
                 Author = "Jagath Samarajeewa",
                 Price = 150,
                 Stock = 200,
-                Image = "Hapana.jpg"
+                Image = "/assets/book_images/Hapana.jpg"
 
             }, new Books
             {
@@ -54,7 +54,7 @@ namespace ShoppingCartApp.Models
                 Author = "Charles Dickens",
                 Price = 550,
                 Stock = 50,
-                Image = "olivertwist.jpg"
+                Image = "/assets/book_images/olivertwist.jpg"
 
             }, new Books
             {
@@ -64,7 +64,7 @@ namespace ShoppingCartApp.Models
                 Author = "Arthur Conan Doyle",
                 Price = 600,
                 Stock = 300,
-                Image = "Sherlock Homes.jpg"
+                Image = "/assets/book_images/Sherlock Homes.jpg"
 
             }, new Books
             {
@@ -74,7 +74,27 @@ namespace ShoppingCartApp.Models
                 Author = "Arthur Conan Doyle",
                 Price = 400,
                 Stock = 180,
-                Image = "The Lost World.jpg"
+                Image = "/assets/book_images/The Lost World.jpg"
+
+            }, new Books
+            {
+                Id = 6,
+                Name = "Constantine",
+                Type = "English Novel",
+                Author = "John Shirley",
+                Price = 1000,
+                Stock = 700,
+                Image = "/assets/book_images/Constantine.jpg"
+
+            }, new Books
+            {
+                Id = 7,
+                Name = "Harry Potter and the Philosopher's Stone",
+                Type = "English Novel",
+                Author = "J. K. Rowling",
+                Price = 350,
+                Stock = 800,
+                Image = "/assets/book_images/Harry Potter and the Philosopher's Stone.jpg"
             }
             );
 

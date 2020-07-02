@@ -10,8 +10,8 @@ using ShoppingCartApp.Models;
 namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(ShoppingCartContext))]
-    [Migration("20200619160031_CreatedOrderDetailsTable_AddedReferencesToOrdersAndBooksTables")]
-    partial class CreatedOrderDetailsTable_AddedReferencesToOrdersAndBooksTables
+    [Migration("20200701152243_CreateAllTables")]
+    partial class CreateAllTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -29,28 +29,37 @@ namespace ShoppingCartApp.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Address")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("LoginStatus")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("LoginStatus")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(30)")
+                        .HasMaxLength(30);
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int");
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
 
                     b.Property<DateTime>("RegisterDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.HasKey("Id");
 
@@ -59,15 +68,10 @@ namespace ShoppingCartApp.Migrations
 
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.OrderDetails", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BookID")
+                    b.Property<int>("OrderId")
                         .HasColumnType("int");
 
-                    b.Property<int>("OrderID")
+                    b.Property<int>("BookId")
                         .HasColumnType("int");
 
                     b.Property<int>("Quantity")
@@ -76,11 +80,11 @@ namespace ShoppingCartApp.Migrations
                     b.Property<decimal>("SubTotal")
                         .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("Id");
+                    b.HasKey("OrderId", "BookId");
 
-                    b.HasIndex("BookID");
+                    b.HasIndex("BookId");
 
-                    b.HasIndex("OrderID")
+                    b.HasIndex("OrderId")
                         .IsUnique();
 
                     b.ToTable("OrderDetails");
@@ -93,14 +97,16 @@ namespace ShoppingCartApp.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CustomerId")
+                    b.Property<int>("CustomerId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)")
+                        .HasMaxLength(15);
 
                     b.HasKey("Id");
 
@@ -117,7 +123,9 @@ namespace ShoppingCartApp.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("CustomerName")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<int>("OrderID")
                         .HasColumnType("int");
@@ -129,7 +137,9 @@ namespace ShoppingCartApp.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PaymentMethod")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)")
+                        .HasMaxLength(15);
 
                     b.HasKey("Id");
 
@@ -147,91 +157,44 @@ namespace ShoppingCartApp.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Author")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)")
+                        .HasMaxLength(20);
 
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("Price")
-                        .HasColumnType("real");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Stock")
                         .HasColumnType("int");
 
                     b.Property<string>("Type")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(15)")
+                        .HasMaxLength(15);
 
                     b.HasKey("Id");
 
                     b.ToTable("Books");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Author = "Martin WickrmaSinghe",
-                            Image = "MadolDoova.jpg",
-                            Name = "Madol Doova",
-                            Price = 300f,
-                            Stock = 100,
-                            Type = "Sinhala Novel"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Author = "Jagath Samarajeewa",
-                            Image = "Hapana.jpg",
-                            Name = "Hapana",
-                            Price = 150f,
-                            Stock = 200,
-                            Type = "Kids"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Author = "Charles Dickens",
-                            Image = "olivertwist.jpg",
-                            Name = "Oliver Twist",
-                            Price = 550f,
-                            Stock = 50,
-                            Type = "English Novel"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Author = "Arthur Conan Doyle",
-                            Image = "Sherlock Homes.jpg",
-                            Name = "Sherlock Holmes",
-                            Price = 600f,
-                            Stock = 300,
-                            Type = "English Novel"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Author = "Arthur Conan Doyle",
-                            Image = "The Lost World.jpg",
-                            Name = "The Lost World",
-                            Price = 400f,
-                            Stock = 180,
-                            Type = "English Novel"
-                        });
                 });
 
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.OrderDetails", b =>
                 {
                     b.HasOne("ShoppingCartApp.Models.Books", "Books")
                         .WithMany("OrderDetails")
-                        .HasForeignKey("BookID")
+                        .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("ShoppingCartApp.Domain.Models.Orders", "Orders")
                         .WithOne("OrderDetails")
-                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderID")
+                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -240,7 +203,9 @@ namespace ShoppingCartApp.Migrations
                 {
                     b.HasOne("ShoppingCartApp.Domain.Models.Customers", "Customer")
                         .WithMany("Orders")
-                        .HasForeignKey("CustomerId");
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ShoppingCartApp.Domain.Models.Payments", b =>

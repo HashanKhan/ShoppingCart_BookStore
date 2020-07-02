@@ -2,6 +2,8 @@
 
 <mat-card class="registration-card">
     <mat-card-content>
+        <div>Required - <span class="star">*</span></div><br>
+
         <form class="register-form" [formGroup]="registerForm">
             <mat-form-field class="width">
                 <mat-label>Name</mat-label>
@@ -10,7 +12,7 @@
                     Name is required.
                 </mat-error>
                 <mat-error *ngIf="f.name.touched && f.name.invalid && f.name.hasError('pattern')">
-                    Name should have only letters.
+                    Name should have only letters and numbers.
                 </mat-error>
             </mat-form-field><br>
 
@@ -21,7 +23,7 @@
                     Phone Number should have atleast 10 digits.
                 </mat-error>
                 <mat-error *ngIf="f.phone.touched && f.phone.invalid && f.phone.hasError('pattern')">
-                    Need to have a valid phone number.
+                    Should have a valid phone number.
                 </mat-error>
                 <mat-error *ngIf="f.phone.touched && f.phone.invalid && f.phone.hasError('maxLength')">
                     Phone Number shouldn't have more than 10 digits.
@@ -35,7 +37,7 @@
                     Email is required.
                 </mat-error>
                 <mat-error *ngIf="f.email.touched && f.email.invalid && f.email.hasError('pattern')">
-                    Need to have a valid email.
+                    Should have a valid email.
                 </mat-error>
             </mat-form-field><br>
 
@@ -73,7 +75,7 @@
                 <mat-error *ngIf="f.password.touched && f.password.invalid && f.password.hasError('maxLength')">
                     Password shouldn't have more than 15 digits.
                 </mat-error>
-            </mat-form-field>
+            </mat-form-field><br>
 
             <mat-form-field class="width">
                 <mat-label>Confirm Password</mat-label>
@@ -84,7 +86,12 @@
                 <mat-error *ngIf="f.confirmPassword.touched && f.confirmPassword.invalid && f.confirmPassword.hasError('mustMatch')">
                     Passwords must match.
                 </mat-error>
-            </mat-form-field>
+            </mat-form-field><br>
+
+            <mat-error *ngIf="response">
+                {{response}}
+            </mat-error>
+
         </form>
     </mat-card-content>
     <mat-card-actions>

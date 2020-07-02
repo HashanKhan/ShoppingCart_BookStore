@@ -15,8 +15,8 @@ namespace ShoppingCartApp.Domain.Models
         [StringLength(30)]
         public string Name { get; set; }
 
-        [MaxLength(10)]
-        public int Phone { get; set; }
+        [StringLength(10)]
+        public string Phone { get; set; }
 
         [Required]
         public string Email { get; set; }

@@ -10,8 +10,8 @@ using ShoppingCartApp.Models;
 namespace ShoppingCartApp.Migrations
 {
     [DbContext(typeof(ShoppingCartContext))]
-    [Migration("20200626152232_AddedSomeDecoratorChangesToAllModels")]
-    partial class AddedSomeDecoratorChangesToAllModels
+    [Migration("20200701152624_BooksDataSeed")]
+    partial class BooksDataSeed
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -49,8 +49,8 @@ namespace ShoppingCartApp.Migrations
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
 
-                    b.Property<int>("Phone")
-                        .HasColumnType("int")
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(10)")
                         .HasMaxLength(10);
 
                     b.Property<DateTime>("RegisterDate")
@@ -188,7 +188,7 @@ namespace ShoppingCartApp.Migrations
                         {
                             Id = 1,
                             Author = "Martin WickrmaSinghe",
-                            Image = "MadolDoova.jpg",
+                            Image = "/assets/book_images/MadolDoova.jpg",
                             Name = "Madol Doova",
                             Price = 300m,
                             Stock = 100,
@@ -198,7 +198,7 @@ namespace ShoppingCartApp.Migrations
                         {
                             Id = 2,
                             Author = "Jagath Samarajeewa",
-                            Image = "Hapana.jpg",
+                            Image = "/assets/book_images/Hapana.jpg",
                             Name = "Hapana",
                             Price = 150m,
                             Stock = 200,
@@ -208,7 +208,7 @@ namespace ShoppingCartApp.Migrations
                         {
                             Id = 3,
                             Author = "Charles Dickens",
-                            Image = "olivertwist.jpg",
+                            Image = "/assets/book_images/olivertwist.jpg",
                             Name = "Oliver Twist",
                             Price = 550m,
                             Stock = 50,
@@ -218,7 +218,7 @@ namespace ShoppingCartApp.Migrations
                         {
                             Id = 4,
                             Author = "Arthur Conan Doyle",
-                            Image = "Sherlock Homes.jpg",
+                            Image = "/assets/book_images/Sherlock Homes.jpg",
                             Name = "Sherlock Holmes",
                             Price = 600m,
                             Stock = 300,
@@ -228,10 +228,30 @@ namespace ShoppingCartApp.Migrations
                         {
                             Id = 5,
                             Author = "Arthur Conan Doyle",
-                            Image = "The Lost World.jpg",
+                            Image = "/assets/book_images/The Lost World.jpg",
                             Name = "The Lost World",
                             Price = 400m,
                             Stock = 180,
+                            Type = "English Novel"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Author = "John Shirley",
+                            Image = "/assets/book_images/Constantine.jpg",
+                            Name = "Constantine",
+                            Price = 1000m,
+                            Stock = 700,
+                            Type = "English Novel"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Author = "J. K. Rowling",
+                            Image = "/assets/book_images/Harry Potter and the Philosopher's Stone.jpg",
+                            Name = "Harry Potter and the Philosopher's Stone",
+                            Price = 350m,
+                            Stock = 800,
                             Type = "English Novel"
                         });
                 });

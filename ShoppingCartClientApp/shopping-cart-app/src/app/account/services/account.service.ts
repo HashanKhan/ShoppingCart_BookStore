@@ -15,7 +15,7 @@ export class AccountService {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Authorization': 'my-auth-token'
+      'Authorization': 'my-auth-token',
     })
   };
 
@@ -23,8 +23,14 @@ export class AccountService {
     this.apiUrl = environment.BaseUrl;
   }
 
-registerCustomer (customer: Customers): Observable<Customers> {
-  return this.http.post<Customers>(this.apiUrl, customer, this.httpOptions)
+registerCustomer (customer: Customers): Observable<string> {
+  return this.http.post(this.apiUrl + "accounts", customer, {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'my-auth-token',
+    }),
+    responseType: 'text'
+  })
     .pipe(
       catchError(this.handleError)
     );

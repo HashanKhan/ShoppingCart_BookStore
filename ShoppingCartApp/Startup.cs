@@ -12,6 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using ShoppingCartApp.Domain.IRepositories;
+using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Repositories;
 using ShoppingCartApp.Domain.Services;
 using ShoppingCartApp.Extensions;
@@ -41,6 +43,9 @@ namespace ShoppingCartApp
             //New Scoped Lines.
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IProductService, ProductService>();
+
+            services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IAccountService, AccountService>();
 
             services.AddControllers();
         }
