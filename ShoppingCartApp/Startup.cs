@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -12,13 +13,18 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
 using ShoppingCartApp.Domain.IRepositories;
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Repositories;
+using ShoppingCartApp.Domain.Security.Hashing;
+using ShoppingCartApp.Domain.Security.Tokens;
 using ShoppingCartApp.Domain.Services;
 using ShoppingCartApp.Extensions;
 using ShoppingCartApp.Models;
 using ShoppingCartApp.Persistence.Repositories;
+using ShoppingCartApp.Security.Hashing;
+using ShoppingCartApp.Security.Tokens;
 using ShoppingCartApp.Services;
 
 namespace ShoppingCartApp
@@ -47,6 +53,32 @@ namespace ShoppingCartApp
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IAccountService, AccountService>();
 
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddSingleton<ITokenHandler, Security.Tokens.TokenHandler>();
+
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+            services.Configure<TokenOptions>(Configuration.GetSection("TokenOptions"));
+            var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+
+            var signingConfigurations = new SigningConfigurations();
+            services.AddSingleton(signingConfigurations);
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(jwtBearerOptions =>
+                {
+                    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateAudience = true,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        ValidIssuer = tokenOptions.Issuer,
+                        ValidAudience = tokenOptions.Audience,
+                        IssuerSigningKey = signingConfigurations.Key,
+                        ClockSkew = TimeSpan.Zero
+                    };
+                });
+
             services.AddControllers();
         }
 
@@ -70,6 +102,8 @@ namespace ShoppingCartApp
             });
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

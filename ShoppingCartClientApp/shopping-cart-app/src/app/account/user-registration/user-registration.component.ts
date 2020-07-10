@@ -4,6 +4,7 @@ import { MustMatch } from '../helpers/must-match.validator';
 import { Customers } from '../models/customers';
 import { AccountService } from '../services/account.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-registration',
@@ -39,7 +40,8 @@ export class UserRegistrationComponent implements OnInit {
 
   currentDate : string = this.dateTime();
 
-  constructor(private formBuilder: FormBuilder, private accountService: AccountService, private snackBar: MatSnackBar) {}
+  constructor(private formBuilder: FormBuilder, private accountService: AccountService, private snackBar: MatSnackBar,
+                                    private router: Router) {}
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -55,7 +57,7 @@ export class UserRegistrationComponent implements OnInit {
   });
 
   //For easy testing purposes.
-  // this.onTesting();
+  this.onTesting();
 
   }
 
@@ -77,20 +79,18 @@ export class UserRegistrationComponent implements OnInit {
       registerDate: this.currentDate
     }
 
-    this.accountService.registerCustomer(this.customer).subscribe((res) => {
+    this.accountService.registerCustomer(this.customer).subscribe(res => {
       if(res){
-
         if(res == "Added Successfully."){
           this.response = "";
 
           this.openSnackBar(res,"Registered");
 
-          this.onTesting();
+          this.router.navigate(['/account/login']);  
         }
         else{
           this.response = res;
-        }
-        
+        }  
       }
       else{
         console.log("Error");
@@ -113,7 +113,7 @@ export class UserRegistrationComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
-      duration: 5000,
+      duration: 1500,
     });
   }
 

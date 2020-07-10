@@ -7,12 +7,14 @@
     <h1>Shopping Cart</h1>
     <span class="menu-spacer"></span>
     <div class="account">
-      <a class="signup" [routerLink]="'/account/register'">Signup</a>&nbsp;&nbsp;
+      <button mat-raised-button color="primary" *ngIf="!this.authenticationService.isLoggedIn" class="signin" [routerLink]="'/account/login'">Login</button>&nbsp;&nbsp;
+      <button *ngIf="this.authenticationService.isLoggedIn" mat-raised-button color="primary" class="signout" (click)="onLogOut()">Logout</button>
     </div>
   </mat-toolbar-row>
 
   <mat-toolbar-row>
       <span style="font-size: 12px;">The Shopping Cart will enable Customers to easily track their products and purchase them.</span>
+      <!-- <span>{{userName}}</span> -->
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -23,12 +25,6 @@
       <div>
         <a mat-list-item [routerLink]="'/shoppingCart/books'" (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</a>
       </div>
-      <!-- <div>
-        <a mat-list-item [routerLink]="'/files/filelist'" (click)="sidenav.toggle()"><mat-icon>file_copy</mat-icon>Files</a>
-      </div>
-      <div>
-        <a mat-list-item [routerLink]="'/reports/reportlist'" (click)="sidenav.toggle()"><mat-icon>file_copy</mat-icon>Reports</a>
-      </div> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
