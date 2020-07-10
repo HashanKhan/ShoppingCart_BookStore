@@ -26,7 +26,7 @@ namespace ShoppingCartApp.Controllers
             _accountService = accountService;
         }
 
-        [HttpPost]
+        [HttpPost("register")]
         public ActionResult<string> RegisterCustomer([FromBody] Customers customer)
         {
             if (!ModelState.IsValid)
@@ -50,6 +50,28 @@ namespace ShoppingCartApp.Controllers
             var result = _accountService.RegisterCustomer(new_customer);
 
             return result;
+        }
+
+        [HttpPost("logout")]
+        public ActionResult<string> LogOutCustomer([FromBody] UserCredentials userCredentials)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.GetErrorMessages());
+            }
+
+            var customer = _accountService.FindCustomerByUserName(userCredentials.UserName);
+
+            if (customer == null)
+            {
+                return "The Customer is not Exist.";
+            }
+            else
+            {
+                var updated_customer = _accountService.LogOutCustomer(customer);
+
+                return updated_customer;
+            }
         }
     }
 }

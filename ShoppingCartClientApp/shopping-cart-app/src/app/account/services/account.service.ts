@@ -3,7 +3,9 @@ import { Customers } from '../models/customers';
 import { Observable, throwError,  } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
+import { UserCredentials } from '../models/userCredentials';
+import { TokenResponse } from '../models/tokenResponse';
 
 
 @Injectable({
@@ -23,8 +25,27 @@ export class AccountService {
     this.apiUrl = environment.BaseUrl;
   }
 
-registerCustomer (customer: Customers): Observable<string> {
-  return this.http.post(this.apiUrl + "accounts", customer, {
+registerCustomer(customer: Customers): Observable<string> {
+  return this.http.post(this.apiUrl + "accounts/" + "register", customer, {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+      'Authorization': 'my-auth-token',
+    }),
+    responseType: 'text'
+  })
+    .pipe(
+      catchError(this.handleError)
+    );
+}
+
+loginCustomer(userCredentials: UserCredentials): Observable<TokenResponse> {
+  return this.http.post<TokenResponse>(this.apiUrl + "login/" + "login", userCredentials)
+  .pipe(catchError(this.handleError)
+  );
+}
+
+logOutCustomer(userCredentials: UserCredentials): Observable<string> {
+  return this.http.post(this.apiUrl + "accounts/" + "logout", userCredentials, {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
       'Authorization': 'my-auth-token',

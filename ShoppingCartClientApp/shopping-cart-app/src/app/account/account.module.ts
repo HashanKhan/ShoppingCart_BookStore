@@ -10,10 +10,11 @@ import {MatInputModule} from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 
 @NgModule({
-  declarations: [UserRegistrationComponent],
+  declarations: [UserRegistrationComponent, UserLoginComponent],
   imports: [
     CommonModule,
     AccountRoutingModule,
