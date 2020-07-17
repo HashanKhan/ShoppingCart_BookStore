@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Models;
@@ -26,6 +20,7 @@ namespace ShoppingCartApp.Controllers
             _accountService = accountService;
         }
 
+        //Resgister Customer.
         [HttpPost("register")]
         public ActionResult<string> RegisterCustomer([FromBody] Customers customer)
         {
@@ -52,6 +47,7 @@ namespace ShoppingCartApp.Controllers
             return result;
         }
 
+        //Logout Customer from the current session.
         [HttpPost("logout")]
         public ActionResult<string> LogOutCustomer([FromBody] UserCredentials userCredentials)
         {
@@ -68,9 +64,16 @@ namespace ShoppingCartApp.Controllers
             }
             else
             {
-                var updated_customer = _accountService.LogOutCustomer(customer);
+                if (customer.LoginStatus == true)
+                {
+                    var updated_customer = _accountService.LogOutCustomer(customer);
 
-                return updated_customer;
+                    return updated_customer;
+                }
+                else
+                {
+                    return "You have been Logged Out Successfully.";
+                }
             }
         }
     }

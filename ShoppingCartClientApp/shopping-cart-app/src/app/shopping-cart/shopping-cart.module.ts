@@ -18,10 +18,11 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatChipsModule} from '@angular/material/chips';
 import { CheckOutModalComponent } from './check-out-modal/check-out-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { PaymentConfirmationModalComponent } from './payment-confirmation-modal/payment-confirmation-modal.component';
 
 
 @NgModule({
-  declarations: [BookListComponent, CartComponent, CheckOutModalComponent],
+  declarations: [BookListComponent, CartComponent, CheckOutModalComponent, PaymentConfirmationModalComponent],
   imports: [
     CommonModule,
     ShoppingCartRoutingModule,

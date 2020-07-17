@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { MustMatch } from '../helpers/must-match.validator';
-import { Customers } from '../models/customers';
-import { AccountService } from '../services/account.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { Customers } from '../dependencies/models/customers';
+import { AccountService } from '../dependencies/services/account.service';
+import { MustMatch } from '../dependencies/helpers/must-match.validator';
 
 @Component({
   selector: 'app-user-registration',
@@ -21,20 +21,16 @@ export class UserRegistrationComponent implements OnInit {
   customer: Customers;
   response: string;
   
+  //  Setting date in the correct format before submitting.   
    dateTime() {
     var datenow = new Date(Date.now());
     var y = datenow.getFullYear();
     var m = datenow.getMonth() + 1;
     var d = datenow.getDate();
 
-    // var h = datenow.getHours();
-    // var m = datenow.getMinutes();
-    // var s = datenow.getSeconds();
-
     var mm = m < 10 ? '0' + m : m;
     var dd = d < 10 ? '0' + d : d;
-
-    // return [y,MM,dd].join('-') + [h,m,s].join(':');
+    
     return [y,mm,dd].join('-');
   }
 
@@ -43,6 +39,7 @@ export class UserRegistrationComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private accountService: AccountService, private snackBar: MatSnackBar,
                                     private router: Router) {}
 
+  // Set form validations at the startup.                                  
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern(this.namePattern)]],
@@ -64,6 +61,7 @@ export class UserRegistrationComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() { return this.registerForm.controls; }
 
+  // Submit user login request method.
   onSubmit(){
     this.submitted = true;
 
@@ -99,6 +97,7 @@ export class UserRegistrationComponent implements OnInit {
 
   }
 
+  // Sets testing data to the form values for easy testing when page loads.
   onTesting(){
     this.registerForm.setValue({
       name: "TestUser",
@@ -111,12 +110,14 @@ export class UserRegistrationComponent implements OnInit {
     });
   }
 
+  // Snackbar notification method.
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 1500,
     });
   }
 
+  // Reset the form values method.
   onReset(){
     this.submitted = false;
     this.registerForm.reset();

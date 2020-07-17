@@ -1,12 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using ShoppingCartApp.Domain.IRepositories;
+﻿using ShoppingCartApp.Domain.IRepositories;
 using ShoppingCartApp.Domain.Models;
-using ShoppingCartApp.Domain.Security.Hashing;
 using ShoppingCartApp.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShoppingCartApp.Persistence.Repositories
 {
@@ -16,6 +11,7 @@ namespace ShoppingCartApp.Persistence.Repositories
         {
         }
 
+        //Add new user records to the db.
         public string RegisterCustomer(Customers customer)
         {
             var isEmailExisted = _context.Customers.Any(c => c.Email == customer.Email);
@@ -38,11 +34,13 @@ namespace ShoppingCartApp.Persistence.Repositories
             }
         }
 
+        //Search and retrieve Customer details by the username.
         public Customers FindCustomerByUserName(string userName)
         {
             return _context.Customers.SingleOrDefault(c => c.UserName == userName);
         }
 
+        //Update Login Status field in the Customer table as per the rquirement.
         public Customers UpdateLoginStatus(Customers customer)
         {
             _context.Customers.Update(customer);

@@ -6,6 +6,8 @@ namespace ShoppingCartApp.Extensions
 {
     public static class ServiceExtensions
     {
+        //Service extension for ConfigureCors. This wil resolve the CORS issue.
+
         public static void ConfigureCors(this IServiceCollection services)
         {
             services.AddCors(options =>

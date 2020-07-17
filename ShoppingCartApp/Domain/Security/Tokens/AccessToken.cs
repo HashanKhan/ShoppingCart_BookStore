@@ -1,21 +1,9 @@
-﻿using ShoppingCartApp.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ShoppingCartApp.Domain.Security.Tokens
+﻿namespace ShoppingCartApp.Domain.Security.Tokens
 {
     public class AccessToken : JsonWebToken
     {
-        public RefreshToken RefreshToken { get; private set; }
-
-        public AccessToken(string token, long expiration, RefreshToken refreshToken) : base(token, expiration)
+        public AccessToken(string token) : base(token)
         {
-            if (refreshToken == null)
-                throw new ArgumentException("Specify a valid refresh token.");
-
-            RefreshToken = refreshToken;
         }
     }
 }

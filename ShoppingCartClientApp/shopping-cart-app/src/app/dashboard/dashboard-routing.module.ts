@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { WelcomeComponent } from './welcome/welcome.component';
 
+// Routes under the Dashboard module.
 const routes: Routes = [{ path: '', component: WelcomeComponent }];
 
 @NgModule({

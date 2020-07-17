@@ -1,14 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShoppingCartApp.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShoppingCartApp.Models
 {
     public class ShoppingCartContext : DbContext
     {
+        //Main context class for the whole shopping cart db.
+        //Initial data seed for the book products is also added in below.
         public ShoppingCartContext(DbContextOptions options)
             : base(options)
         {

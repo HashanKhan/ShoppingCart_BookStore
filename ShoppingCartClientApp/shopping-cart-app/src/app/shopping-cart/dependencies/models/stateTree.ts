@@ -1,8 +1,9 @@
 import { CartItem } from './CartItem';
+import { Books } from './books';
 
 export interface StateTree {
-    store: CartItem[];
+    store: Books[];
     cart: CartItem[];
-    tot: number,
+    tot: number;
     checkout: boolean;
 };

@@ -81,9 +81,6 @@ namespace ShoppingCartApp.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.HasIndex("OrderId")
-                        .IsUnique();
-
                     b.ToTable("OrderDetails");
                 });
 
@@ -262,8 +259,8 @@ namespace ShoppingCartApp.Migrations
                         .IsRequired();
 
                     b.HasOne("ShoppingCartApp.Domain.Models.Orders", "Orders")
-                        .WithOne("OrderDetails")
-                        .HasForeignKey("ShoppingCartApp.Domain.Models.OrderDetails", "OrderId")
+                        .WithMany("OrderDetails")
+                        .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

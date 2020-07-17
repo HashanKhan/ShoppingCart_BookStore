@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+
+  // Main URL for the Web API.
   BaseUrl: 'https://localhost:44360/api/'
 };
 

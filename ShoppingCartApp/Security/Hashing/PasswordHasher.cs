@@ -1,16 +1,14 @@
 ﻿using ShoppingCartApp.Domain.Security.Hashing;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
-using System.Threading.Tasks;
 
 namespace ShoppingCartApp.Security.Hashing
 {
     /// This password hasher is the same used by ASP.NET Identity.
     public class PasswordHasher : IPasswordHasher
     {
+        //Convert string password to a Hash.
         public string HashPassword(string password)
         {
             byte[] salt;
@@ -30,6 +28,7 @@ namespace ShoppingCartApp.Security.Hashing
             return Convert.ToBase64String(dst);
         }
 
+        //Matches the string password with the Hash.
         public bool PasswordMatches(string providedPassword, string passwordHash)
         {
             byte[] buffer4;
@@ -57,6 +56,7 @@ namespace ShoppingCartApp.Security.Hashing
             return ByteArraysEqual(buffer3, buffer4);
         }
 
+        //Check whether the byte arrays are equal. Used in the Password Matches method.
         [MethodImpl(MethodImplOptions.NoOptimization)]
         private bool ByteArraysEqual(byte[] a, byte[] b)
         {
