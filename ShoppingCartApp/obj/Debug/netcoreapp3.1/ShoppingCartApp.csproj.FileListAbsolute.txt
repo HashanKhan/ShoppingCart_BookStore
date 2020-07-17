@@ -272,8 +272,6 @@ D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\staticw
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.pdb
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.genruntimeconfig.cache
-D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.csproj.CoreCompileInputs.cache
-D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -281,4 +279,6 @@ D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\System.
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.csproj.CoreCompileInputs.cache
+D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.MvcApplicationPartsAssemblyInfo.cache
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.csprojAssemblyReference.cache

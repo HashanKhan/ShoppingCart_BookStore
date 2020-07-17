@@ -1,11 +1,8 @@
 ﻿using ShoppingCartApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShoppingCartApp.Persistence.Repositories
 {
+    //Base repository class. All other repositories are derived from this.
     public class BaseRepository
     {
         protected readonly ShoppingCartContext _context;

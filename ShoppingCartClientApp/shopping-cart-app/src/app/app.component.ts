@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from './account/services/authentication.service';
-import { Router, NavigationEnd } from '@angular/router';
+import { AuthenticationService } from './account/dependencies/services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +8,12 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class AppComponent {
   title = 'shopping-cart-app';
-  userName: string = '';
 
   constructor(public authenticationService: AuthenticationService) {}
 
-   ngOnInit(): void {
-    this.userName = this.authenticationService.getUserName();
-   }
+   ngOnInit(): void {}
 
+  // LogOut Method 
   onLogOut(){
     this.authenticationService.onLogout();
   }

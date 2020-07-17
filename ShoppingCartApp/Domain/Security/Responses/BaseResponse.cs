@@ -1,10 +1,4 @@
-﻿using ShoppingCartApp.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ShoppingCartApp.Domain.IServices.Responses
+﻿namespace ShoppingCartApp.Domain.IServices.Responses
 {
     public abstract class BaseResponse
     {

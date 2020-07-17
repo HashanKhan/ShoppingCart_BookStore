@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ShoppingCartApp.Domain.Models
 {
@@ -23,6 +20,6 @@ namespace ShoppingCartApp.Domain.Models
 
         public virtual Payments Payments { get; set; }
 
-        public virtual OrderDetails OrderDetails { get; set; }
+        public ICollection<OrderDetails> OrderDetails { get; set; }
     }
 }

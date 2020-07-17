@@ -1,5 +1,7 @@
+<!-- Define async state. -->
 <ng-container *ngIf="(state | async) as state">
 
+<!-- Title. -->
 <h2>
     <strong>Checkout Page</strong>
     <button style="float: right;" mat-icon-button [mat-dialog-close]><mat-icon>cancel</mat-icon></button>
@@ -10,10 +12,16 @@
     </p>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</mat-card-title>
+        <mat-card-title *ngIf="!shoppingCartService.getErrorResponse()">Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</mat-card-title>
+        <mat-card-title *ngIf="shoppingCartService.getErrorResponse()">
+          <mat-error>
+              {{shoppingCartService.getErrorResponse()}}
+          </mat-error>
+        </mat-card-title>
       </mat-card-header>
         <mat-card-actions style="text-align: right;">
-          <button mat-flat-button color="primary" (click)="confirmOrder()">
+          <span *ngIf="!this.authenticationService.isLoggedIn">Login first to complete your order. Click <a [routerLink]="" (click)="navigateToLogin()" class="login">here.</a></span>
+          <button mat-flat-button color="primary" (click)="confirmOrder()" *ngIf="this.authenticationService.isLoggedIn">
             Confirm Order &nbsp;<mat-icon>thumb_up</mat-icon>
           </button>
         </mat-card-actions>
@@ -23,6 +31,6 @@
       <p>
         {{ item.name }} &nbsp;<strong>{{ item.price | currency:'LKR ':'symbol':'1.2-2' }}</strong>
       </p>
-    </div> 
-
+    </div>
+    
 </ng-container>

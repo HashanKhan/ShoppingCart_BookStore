@@ -17,3 +17,9 @@ mat-sidenav{
     color: white;
     text-decoration: none;
 }
+
+.userName{
+    text-align: right;
+    position: absolute;
+    left: 90%;
+}

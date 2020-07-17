@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { UserCredentials } from '../models/userCredentials';
-import { AccountService } from '../services/account.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserCredentials } from '../dependencies/models/userCredentials';
+import { AccountService } from '../dependencies/services/account.service';
 
 @Component({
   selector: 'app-user-login',
@@ -20,6 +20,7 @@ export class UserLoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private accountService: AccountService, private router: Router,
                                     private snackBar: MatSnackBar) { }
 
+  // Set form validations at the startup.                                  
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -33,6 +34,7 @@ export class UserLoginComponent implements OnInit {
   // convenience getter for easy access to form fields
   get f() { return this.loginForm.controls; }
 
+  // Submit user Login request.
   onSubmit(){
     this.submitted = true;
 
@@ -46,12 +48,10 @@ export class UserLoginComponent implements OnInit {
           if(res.message == "Logged in Successfully."){
             this.response = "";
 
-            var obj_token = Object.values(res.token);
-            var token_string = JSON.stringify(obj_token);
-
-            localStorage.setItem('auth_token', token_string);
+            localStorage.setItem('auth_token', res.token.token);
             localStorage.setItem('logged_userName', res.customer.userName);
             localStorage.setItem('user_password', res.customer.password);
+            localStorage.setItem('customer_name', res.customer.name);
 
             this.openSnackBar(res.message,"Logged IN");
 
@@ -69,6 +69,7 @@ export class UserLoginComponent implements OnInit {
     });
   }
 
+  // Sets testing data to the form values for easy testing when page loads.
   onTesting(){
     this.loginForm.setValue({
       username: "user100",
@@ -76,12 +77,14 @@ export class UserLoginComponent implements OnInit {
     });
   }
 
+  // Snackbar notification method.
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 1500,
     });
   }
 
+  // Reset the form values method.
   onReset(){
     this.submitted = false;
     this.loginForm.reset();

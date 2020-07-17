@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Books } from '../models/books';
-import { ShoppingCartService } from '../services/shopping-cart.service';
-import { CartItem } from '../models/CartItem';
+import { Books } from '../dependencies/models/books';
+import { ShoppingCartService } from '../dependencies/services/shopping-cart.service';
+import { CartItem } from '../dependencies/models/CartItem';
 
 @Component({
   selector: 'app-book-list',
@@ -12,7 +12,6 @@ import { CartItem } from '../models/CartItem';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
-  // displayedColumns: string[] = ['name', 'type', 'author', 'price', 'stock', 'image', 'add'];
   displayedColumns: string[] = ['name', 'type', 'author', 'price', 'image', 'add'];
   dataSource: MatTableDataSource<Books>;
   books: Books[] = [];
@@ -25,6 +24,7 @@ export class BookListComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   constructor(private shoppingCartService: ShoppingCartService) {
+    // Load book products initially.
     this.getAllBooks();
   }
 
@@ -32,6 +32,7 @@ export class BookListComponent implements OnInit {
 
   }
 
+  //Filter class for the search field.
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -41,6 +42,7 @@ export class BookListComponent implements OnInit {
     }
   }
 
+  // Get all books method.
   getAllBooks(){
     this.shoppingCartService.getBooks().subscribe((res: any[]) => {
       this.books = res;
@@ -56,6 +58,7 @@ export class BookListComponent implements OnInit {
     this.shoppingCartService.addCartItem(item);
   }
 
+  // Clear the search field.
   clear(){
     this.value='';
     this.getAllBooks();

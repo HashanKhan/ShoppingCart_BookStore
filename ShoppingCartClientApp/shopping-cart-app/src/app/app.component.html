@@ -1,5 +1,7 @@
 <!--Toolbar-->
 <mat-toolbar color="primary">
+
+  <!-- 1st Toolbar row -->
   <mat-toolbar-row>
     <button mat-icon-button>
       <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
@@ -12,9 +14,10 @@
     </div>
   </mat-toolbar-row>
 
+  <!-- 2nd Toolbar row -->
   <mat-toolbar-row>
       <span style="font-size: 12px;">The Shopping Cart will enable Customers to easily track their products and purchase them.</span>
-      <!-- <span>{{userName}}</span> -->
+      <span *ngIf="this.authenticationService.isLoggedIn" class="userName">{{authenticationService.getCustomerName()}}</span>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -27,6 +30,8 @@
       </div>
     </mat-nav-list>
   </mat-sidenav>
+
+  <!-- All the inner content is displayed in here. -->
   <mat-sidenav-content>
     <div style="height: 88vh;">
       <router-outlet></router-outlet>
