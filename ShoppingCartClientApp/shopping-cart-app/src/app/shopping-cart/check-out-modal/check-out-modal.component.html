@@ -12,7 +12,7 @@
     </p>
     <mat-card>
       <mat-card-header>
-        <mat-card-title *ngIf="!shoppingCartService.getErrorResponse()">Total: {{ state.tot.totl | currency:'LKR ':'symbol':'1.2-2' }}</mat-card-title>
+        <mat-card-title *ngIf="!shoppingCartService.getErrorResponse()">Your ShoppingCart is ready to be CheckedOut. Please review you cart Items.</mat-card-title>
         <mat-card-title *ngIf="shoppingCartService.getErrorResponse()">
           <mat-error>
               {{shoppingCartService.getErrorResponse()}}

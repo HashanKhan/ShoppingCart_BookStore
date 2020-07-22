@@ -106,7 +106,7 @@ export class ShoppingCartService {
 
   //Check availability of the stock againts the number of items in the cart.
   checkStockAvailability(cart: CartItem[]): Observable<string>{
-    return this.http.post(this.apiUrl + "products", cart, {responseType: 'text'}
+    return this.http.post(this.apiUrl + "products/" + "checkAvailability", cart, {responseType: 'text'}
     ).pipe(
       catchError(this.handleError)
     );
@@ -116,7 +116,7 @@ export class ShoppingCartService {
   openPaymentModal(state: StateTree){
     const dialogRef = this.dialog.open(PaymentConfirmationModalComponent, {
       width: '600px',
-      height: '500px',
+      height: '405px',
       disableClose: true,
       data: state
     });

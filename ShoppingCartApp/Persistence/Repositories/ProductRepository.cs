@@ -22,5 +22,20 @@ namespace ShoppingCartApp.Persistence.Repositories
         {
             return _context.Books.SingleOrDefault(b => b.Name == Name);
         }
+
+        //Retrieve a book by id from the db.
+        public Books FindBookByID(int Id)
+        {
+            return _context.Books.SingleOrDefault(b => b.Id == Id);
+        }
+
+        //Update book stock in the db.
+        public Books UpdateBookStock(Books book)
+        {
+            _context.Books.Update(book);
+            _context.SaveChanges();
+
+            return book;
+        }
     }
 }

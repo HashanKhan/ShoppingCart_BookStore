@@ -16,7 +16,7 @@ namespace ShoppingCartApp.Domain.Models
         public int Quantity { get; set; }
 
         [Required]
-        public decimal SubTotal { get; set; }
+        public decimal UnitCost { get; set; }
 
         public virtual Orders Orders { get; set; }
 

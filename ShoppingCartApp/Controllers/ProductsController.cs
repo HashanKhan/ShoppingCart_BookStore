@@ -35,7 +35,7 @@ namespace ShoppingCartApp.Controllers
         }
 
         //Check the stock availability (authorized end-point).
-        [HttpPost]
+        [HttpPost("checkAvailability")]
         [Authorize]
         public ActionResult<string> CheckStockAvailability([FromBody] CartItem[] cartItemArray)
         {
@@ -45,9 +45,9 @@ namespace ShoppingCartApp.Controllers
             }
 
             var itemResult = from cartItem in cartItemArray
-                         group cartItem by cartItem.Name into g
-                         let count = g.Count()
-                         select new { Value = g.Key, Count = count };
+                             group cartItem by cartItem.Name into g
+                             let count = g.Count()
+                             select new { Value = g.Key, Count = count };
 
             foreach (var i in itemResult)
             {

@@ -28,7 +28,7 @@ registerCustomer(customer: Customers): Observable<string> {
 
 // Customer login method.
 loginCustomer(userCredentials: UserCredentials): Observable<TokenResponse> {
-  return this.http.post<TokenResponse>(this.apiUrl + "login/" + "login", userCredentials)
+  return this.http.post<TokenResponse>(this.apiUrl + "accounts/" + "login", userCredentials)
   .pipe(catchError(this.handleError)
   );
 }
