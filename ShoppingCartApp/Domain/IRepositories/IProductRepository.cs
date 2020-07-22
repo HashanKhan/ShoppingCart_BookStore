@@ -8,5 +8,9 @@ namespace ShoppingCartApp.Domain.Repositories
         IEnumerable<Books> GetAllProducts();
 
         Books FindBookByName(string Name);
+
+        Books FindBookByID(int Id);
+
+        Books UpdateBookStock(Books book);
     }
 }

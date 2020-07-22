@@ -12,8 +12,7 @@ namespace ShoppingCartApp.Domain.Models
         public DateTime DateCreated { get; set; }
 
         [Required]
-        [StringLength(15)]
-        public string Status { get; set; }
+        public decimal SubTotal { get; set; }
 
         [Required]
         public Customers Customer { get; set; }

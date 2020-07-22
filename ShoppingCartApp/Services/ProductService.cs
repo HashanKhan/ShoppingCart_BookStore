@@ -25,5 +25,21 @@ namespace ShoppingCartApp.Services
         {
             return _productRepository.FindBookByName(Name);
         }
+
+        //Get a book by the id.
+        public Books FindBookByID(int Id)
+        {
+            return _productRepository.FindBookByID(Id);
+        }
+
+        //Reduce the stock amounts.
+        public Books DecreaseBookStock(Books book, int count)
+        {
+            book.Stock = book.Stock - count;
+
+            var updatedResult = _productRepository.UpdateBookStock(book);
+
+            return updatedResult;
+        }
     }
 }

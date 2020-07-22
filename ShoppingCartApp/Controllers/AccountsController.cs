@@ -14,10 +14,13 @@ namespace ShoppingCartApp.Controllers
 
         private readonly IAccountService _accountService;
 
-        public AccountsController(ILogger<AccountsController> logger, IAccountService accountService)
+        private readonly IAuthenticationService _authenticationService;
+
+        public AccountsController(ILogger<AccountsController> logger, IAccountService accountService, IAuthenticationService authenticationService)
         {
             _logger = logger;
             _accountService = accountService;
+            _authenticationService = authenticationService;
         }
 
         //Resgister Customer.
@@ -46,6 +49,21 @@ namespace ShoppingCartApp.Controllers
 
             return result;
         }
+
+        //Login Customer.
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UserCredentials userCredentials)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.GetErrorMessages());
+            }
+
+            var response = _authenticationService.CreateAccessToken(userCredentials.UserName, userCredentials.Password);
+
+            return Ok(response);
+        }
+
 
         //Logout Customer from the current session.
         [HttpPost("logout")]

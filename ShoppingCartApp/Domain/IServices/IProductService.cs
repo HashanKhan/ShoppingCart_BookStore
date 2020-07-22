@@ -8,5 +8,9 @@ namespace ShoppingCartApp.Domain.Services
         IEnumerable<Books> GetAllProducts();
 
         Books FindBookByName(string Name);
+
+        Books FindBookByID(int Id);
+
+        Books DecreaseBookStock(Books book, int count);
     }
 }

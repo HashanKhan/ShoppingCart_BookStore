@@ -19,6 +19,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { CheckOutModalComponent } from './check-out-modal/check-out-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentConfirmationModalComponent } from './payment-confirmation-modal/payment-confirmation-modal.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PaymentConfirmationModalComponent } from './payment-confirmation-modal/
     HttpClientModule,
     MatDividerModule,
     MatChipsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatRadioModule
   ]
 })
 export class ShoppingCartModule { }

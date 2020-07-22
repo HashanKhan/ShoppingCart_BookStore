@@ -1,0 +1,14 @@
+.payment-radio-group{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0;
+}
+
+.payment-radio-button{
+    margin: 30px;
+}
+
+.payment-image{
+    height: 70%;
+    width: 70%;
+}

@@ -15,6 +15,8 @@ import { UserLoginComponent } from './account/user-login/user-login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TokenInterceptor } from './account/dependencies/helpers/TokenInterceptor';
 import { ErrorInterceptor } from './account/dependencies/helpers/ErrorInterceptor';
+import { UserRegistrationComponent } from './account/user-registration/user-registration.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,10 +33,11 @@ import { ErrorInterceptor } from './account/dependencies/helpers/ErrorIntercepto
     MatButtonModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [
-    UserLoginComponent,
+    UserLoginComponent, UserRegistrationComponent,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
