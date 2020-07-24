@@ -12,7 +12,7 @@ namespace ShoppingCartApp.Domain.Models
         public DateTime DateCreated { get; set; }
 
         [Required]
-        public decimal SubTotal { get; set; }
+        public decimal TotalAmount { get; set; }
 
         [Required]
         public Customers Customer { get; set; }

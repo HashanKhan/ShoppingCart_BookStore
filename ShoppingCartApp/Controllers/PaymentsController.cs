@@ -1,10 +1,13 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ShoppingCartApp.Domain.DTOs;
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Models;
 using ShoppingCartApp.Domain.Services;
+using ShoppingCartApp.EmailNotification;
 using ShoppingCartApp.Extensions;
 using ShoppingCartApp.Security.Models;
 
@@ -22,13 +25,17 @@ namespace ShoppingCartApp.Controllers
 
         private readonly IProductService _productService;
 
+        private readonly IEmailService _emailService;
+
         public PaymentsController(ILogger<PaymentsController> logger, IPaymentService paymentService, 
-                                        IAccountService accountService, IProductService productService)
+                                  IAccountService accountService, IProductService productService,
+                                  IEmailService emailService)
         {
             _logger = logger;
             _paymentService = paymentService;
             _accountService = accountService;
             _productService = productService;
+            _emailService = emailService;
         }
 
         // Submitting the Payment.
@@ -47,7 +54,7 @@ namespace ShoppingCartApp.Controllers
             {
                 Customer = customer,
                 DateCreated = paymentDetails.Date,
-                SubTotal = paymentDetails.Total
+                TotalAmount = paymentDetails.Total
             };
 
             var orderResult = _paymentService.PlaceOrder(order);
@@ -89,6 +96,38 @@ namespace ShoppingCartApp.Controllers
 
                 var updatedStockResult = _productService.DecreaseBookStock(item, i.Count);
             }
+
+            List<ItemDetails> itemDetailsList = new List<ItemDetails>();
+
+            foreach (var i in itemResult)
+            {
+                var item = paymentDetails.Cart.FirstOrDefault(c => c.Id == i.Value);
+
+                var itemDetail = new ItemDetails()
+                {
+                    Name = item.Name,
+                    Quantity = i.Count,
+                    UnitCost = item.Price
+                };
+
+                itemDetailsList.Add(itemDetail);
+            }
+
+            var customerBill = new CustomerBill()
+            {
+                Payment = payment,
+                ItemDetailList = itemDetailsList
+            };
+
+            var mailRequest = new MailRequest()
+            {
+                ToEmail = customer.Email,
+                Subject = "Your Payment Confirmation",
+                Bill = customerBill
+            };
+
+            // Passing to the Email service.
+            _emailService.SendEmailAsync(mailRequest);
 
             return "Purchase is Successfull.";
         }
