@@ -72,7 +72,7 @@ export class UserLoginComponent implements OnInit {
   // Sets testing data to the form values for easy testing when page loads.
   onTesting(){
     this.loginForm.setValue({
-      username: "user100",
+      username: "hash123",
       password: "12345678"
     });
   }

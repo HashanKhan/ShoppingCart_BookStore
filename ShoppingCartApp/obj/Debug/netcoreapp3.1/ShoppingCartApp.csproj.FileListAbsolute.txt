@@ -281,4 +281,3 @@ D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microso
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.csproj.CoreCompileInputs.cache
 D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.MvcApplicationPartsAssemblyInfo.cache
-D:\Office\ShoppingCart_BookStore\ShoppingCartApp\obj\Debug\netcoreapp3.1\ShoppingCartApp.csprojAssemblyReference.cache

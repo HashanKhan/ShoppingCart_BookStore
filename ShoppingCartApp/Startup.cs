@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using ShoppingCartApp.Domain.DTOs;
 using ShoppingCartApp.Domain.IRepositories;
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Repositories;
@@ -54,6 +55,10 @@ namespace ShoppingCartApp
             services.AddSingleton<ITokenHandler, Security.Tokens.TokenHandler>();
 
             services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+
+            services.AddTransient<IEmailService, EmailService>();
 
             services.Configure<TokenOptions>(Configuration.GetSection("TokenOptions"));
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
