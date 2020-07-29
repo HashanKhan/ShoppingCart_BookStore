@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 
 namespace ShoppingCartApp.Security.Hashing
 {
-    /// This password hasher is the same used by ASP.NET Identity.
+    //This password hasher is the same used by ASP.NET Identity.
     public class PasswordHasher : IPasswordHasher
     {
         //Convert string password to a Hash.

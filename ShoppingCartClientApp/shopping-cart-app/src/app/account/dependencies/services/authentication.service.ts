@@ -12,33 +12,33 @@ export class AuthenticationService {
 
   constructor(private router: Router, private snackBar: MatSnackBar, private accountService: AccountService) { }
 
-  // Get stored token.
+  //Get stored token.
   getToken() {
     return localStorage.getItem('auth_token');
   }
 
-  // Get stored username.
+  //Get stored username.
   getUserName(){
     return localStorage.getItem('logged_userName');
   }
 
-  // Get stored password.
+  //Get stored password.
   getPassword(){
     return localStorage.getItem('user_password');
   }
 
-  // Get stored Name.
+  //Get stored Name.
   getCustomerName(){
     return localStorage.getItem('customer_name');
   }
 
-  // Check whether the user is logged or not.
+  //Check whether the user is logged or not.
   get isLoggedIn(): boolean {
     let authToken = localStorage.getItem('auth_token');
     return (authToken !== null) ? true : false;
   }
 
-  // Customer LogOut method Implemetation.
+  //Customer LogOut method Implemetation.
   onLogout() {
     let userName = this.getUserName();
     let password = this.getPassword();
@@ -73,7 +73,7 @@ export class AuthenticationService {
     });
   }
 
-  // Snackbar notification method.
+  //Snackbar notification method.
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 1500,

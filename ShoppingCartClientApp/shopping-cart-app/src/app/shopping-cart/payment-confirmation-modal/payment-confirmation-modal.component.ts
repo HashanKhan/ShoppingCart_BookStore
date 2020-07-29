@@ -42,7 +42,7 @@ export class PaymentConfirmationModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Submit Payment.
+  //Submit Payment.
   onSubmit(){
     this.paymentDetails = {
       cart: this.state.cart,
@@ -66,7 +66,7 @@ export class PaymentConfirmationModalComponent implements OnInit {
     });
   }
 
-  // Snackbar notification method.
+  //Snackbar notification method.
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 1500,

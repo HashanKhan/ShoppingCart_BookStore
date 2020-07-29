@@ -38,7 +38,7 @@ namespace ShoppingCartApp.Controllers
             _emailService = emailService;
         }
 
-        // Submitting the Payment.
+        //Submitting the Payment.
         [HttpPost]
         [Authorize]
         public ActionResult<string> CompletePayment([FromBody] PaymentDetails paymentDetails)

@@ -21,7 +21,7 @@ export class UserRegistrationComponent implements OnInit {
   customer: Customers;
   response: string;
   
-  //  Setting date in the correct format before submitting.   
+  //Setting date in the correct format before submitting.   
    dateTime() {
     var datenow = new Date(Date.now());
     var y = datenow.getFullYear();
@@ -39,7 +39,7 @@ export class UserRegistrationComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private accountService: AccountService, private snackBar: MatSnackBar,
                                     private router: Router) {}
 
-  // Set form validations at the startup.                                  
+  //Set form validations at the startup.                                  
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       name: ['', [Validators.required, Validators.pattern(this.namePattern)]],
@@ -58,10 +58,10 @@ export class UserRegistrationComponent implements OnInit {
 
   }
 
-  // convenience getter for easy access to form fields
+  //convenience getter for easy access to form fields
   get f() { return this.registerForm.controls; }
 
-  // Submit user login request method.
+  //Submit user login request method.
   onSubmit(){
     this.submitted = true;
 
@@ -97,7 +97,7 @@ export class UserRegistrationComponent implements OnInit {
 
   }
 
-  // Sets testing data to the form values for easy testing when page loads.
+  //Sets testing data to the form values for easy testing when page loads.
   onTesting(){
     this.registerForm.setValue({
       name: "TestUser",
@@ -110,14 +110,14 @@ export class UserRegistrationComponent implements OnInit {
     });
   }
 
-  // Snackbar notification method.
+  //Snackbar notification method.
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 1500,
     });
   }
 
-  // Reset the form values method.
+  //Reset the form values method.
   onReset(){
     this.submitted = false;
     this.registerForm.reset();

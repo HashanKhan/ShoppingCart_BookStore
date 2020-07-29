@@ -13,7 +13,7 @@ export class AppComponent {
 
    ngOnInit(): void {}
 
-  // LogOut Method 
+  //LogOut Method 
   onLogOut(){
     this.authenticationService.onLogout();
   }

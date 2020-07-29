@@ -1,6 +1,7 @@
 ﻿using ShoppingCartApp.Domain.IRepositories;
 using ShoppingCartApp.Domain.Models;
 using ShoppingCartApp.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ShoppingCartApp.Persistence.Repositories
@@ -47,6 +48,30 @@ namespace ShoppingCartApp.Persistence.Repositories
             _context.SaveChanges();
 
             return customer;
+        }
+
+        //Retrieve Orders by the Customer Id from the db.
+        public IEnumerable<Orders> GetOrdersByCustomerId(int customerId)
+        {
+            var orders = _context.Orders.Where(o => o.Customer.Id == customerId).ToList();
+
+            return orders;
+        }
+
+        //Retrieve Orderdetails by the Order Id from the db.
+        public IEnumerable<OrderDetails> GetOrderDetailsByOrderId(int orderId)
+        {
+            var orderDetails = _context.OrderDetails.Where(od => od.OrderId == orderId).ToList();
+
+            return orderDetails;
+        }
+
+        //Retrieve Payments by the Customer Name from the db.
+        public IEnumerable<Payments> GetPaymentsByCustomerName(string customerName)
+        {
+            var payments = _context.Payments.Where(p => p.CustomerName == customerName).ToList();
+
+            return payments;
         }
     }
 }

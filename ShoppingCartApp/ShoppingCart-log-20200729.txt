@@ -1,0 +1,1083 @@
+2020-07-29 12:30:10.398 +05:30 [Information] User profile is available. Using '"C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-07-29 12:30:19.323 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-07-29 12:30:19.324 +05:30 [Information] Hosting environment: "Development"
+2020-07-29 12:30:19.325 +05:30 [Information] Content root path: "D:\Office\ShoppingCart_BookStore\ShoppingCartApp"
+2020-07-29 12:30:19.891 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 12:30:21.360 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:30:21.591 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 12:30:23.516 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 12:30:27.623 +05:30 [Warning] No type was specified for the decimal column '"UnitCost"' on entity type '"OrderDetails"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 12:30:27.624 +05:30 [Warning] No type was specified for the decimal column '"TotalAmount"' on entity type '"Orders"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 12:30:27.624 +05:30 [Warning] No type was specified for the decimal column '"PaymentAmount"' on entity type '"Payments"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 12:30:27.624 +05:30 [Warning] No type was specified for the decimal column '"Price"' on entity type '"Books"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 12:30:28.233 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:30:39.140 +05:30 [Information] Executed DbCommand ("517"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 12:30:39.596 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:30:40.711 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 19099.0923ms
+2020-07-29 12:30:40.741 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:30:40.839 +05:30 [Information] Request finished in 20950.4728ms 200 application/json; charset=utf-8
+2020-07-29 12:30:45.838 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/favicon.ico  
+2020-07-29 12:30:45.905 +05:30 [Information] Request finished in 68.3578ms 404 
+2020-07-29 12:30:52.485 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 12:30:52.506 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:30:52.508 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 12:30:52.510 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 12:30:52.592 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:30:52.634 +05:30 [Information] Executed DbCommand ("35"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 12:30:52.639 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:30:52.644 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 136.0817ms
+2020-07-29 12:30:52.645 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:30:52.646 +05:30 [Information] Request finished in 162.1023ms 200 application/json; charset=utf-8
+2020-07-29 12:31:08.438 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 12:31:08.449 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:08.471 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:08.472 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 12:31:08.481 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 12:31:08.502 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:31:08.511 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 12:31:08.513 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:31:08.548 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 75.5524ms
+2020-07-29 12:31:08.548 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:08.548 +05:30 [Information] Request finished in 110.5668ms 200 application/json; charset=utf-8
+2020-07-29 12:31:08.574 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 12:31:08.575 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:08.575 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:08.576 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 12:31:08.576 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 12:31:08.577 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:31:08.579 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 12:31:08.580 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:31:08.581 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 4.8019ms
+2020-07-29 12:31:08.581 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:08.582 +05:30 [Information] Request finished in 7.6227ms 200 application/json; charset=utf-8
+2020-07-29 12:31:28.414 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/login  
+2020-07-29 12:31:28.415 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:28.417 +05:30 [Information] Request finished in 3.0653ms 204 
+2020-07-29 12:31:28.425 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/login application/json 44
+2020-07-29 12:31:28.425 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:28.426 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)"'
+2020-07-29 12:31:28.520 +05:30 [Information] Route matched with "{action = \"Login\", controller = \"Accounts\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:31:28.946 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:31:29.733 +05:30 [Information] Executed DbCommand ("407"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:31:32.441 +05:30 [Information] Executed DbCommand ("333"ms) [Parameters=["@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 30), @p4='?' (Size = 4000), @p5='?' (Size = 10), @p6='?' (DbType = DateTime2), @p7='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Customers] SET [Address] = @p0, [Email] = @p1, [LoginStatus] = @p2, [Name] = @p3, [Password] = @p4, [Phone] = @p5, [RegisterDate] = @p6, [UserName] = @p7
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;"
+2020-07-29 12:31:32.560 +05:30 [Information] Executing ObjectResult, writing value of type '"ShoppingCartApp.Domain.IServices.Responses.TokenResponse"'.
+2020-07-29 12:31:32.701 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)" in 4179.6189ms
+2020-07-29 12:31:32.713 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)"'
+2020-07-29 12:31:32.714 +05:30 [Information] Request finished in 4289.6853ms 200 application/json; charset=utf-8
+2020-07-29 12:31:32.765 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/products  
+2020-07-29 12:31:32.766 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:32.766 +05:30 [Information] Request finished in 1.1219ms 204 
+2020-07-29 12:31:32.770 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 12:31:32.770 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:33.118 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:31:33.130 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:33.130 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 12:31:33.131 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 12:31:33.132 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:31:33.153 +05:30 [Information] Executed DbCommand ("20"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 12:31:33.154 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:31:33.155 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 25.1959ms
+2020-07-29 12:31:33.156 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 12:31:33.156 +05:30 [Information] Request finished in 385.6652ms 200 application/json; charset=utf-8
+2020-07-29 12:31:36.464 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 12:31:36.465 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:36.466 +05:30 [Information] Request finished in 1.708ms 204 
+2020-07-29 12:31:36.471 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:31:36.471 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:31:36.480 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:31:36.496 +05:30 [Information] Authorization was successful.
+2020-07-29 12:31:36.497 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:31:36.501 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:31:52.810 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:31:52.851 +05:30 [Information] Executed DbCommand ("27"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:32:04.237 +05:30 [Information] Executed DbCommand ("687"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:32:16.201 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:32:16.255 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 39753.2765ms
+2020-07-29 12:32:16.257 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:32:16.258 +05:30 [Information] Request finished in 39787.1777ms 200 application/json; charset=utf-8
+2020-07-29 12:32:55.319 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 12:32:55.323 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:32:55.324 +05:30 [Information] Request finished in 6.4158ms 204 
+2020-07-29 12:32:55.328 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:32:55.328 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:32:55.331 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:32:55.334 +05:30 [Information] Authorization was successful.
+2020-07-29 12:32:55.337 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:32:55.338 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:32:55.346 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:32:55.352 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:32:55.361 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:32:55.362 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:32:55.363 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 24.898ms
+2020-07-29 12:32:55.363 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:32:55.363 +05:30 [Information] Request finished in 35.4468ms 200 application/json; charset=utf-8
+2020-07-29 12:33:35.267 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orders  
+2020-07-29 12:33:35.272 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:35.272 +05:30 [Information] Request finished in 5.2688ms 204 
+2020-07-29 12:33:35.277 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orders application/json 104
+2020-07-29 12:33:35.278 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:35.281 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:33:35.284 +05:30 [Information] Authorization was successful.
+2020-07-29 12:33:35.284 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 12:33:35.290 +05:30 [Information] Route matched with "{action = \"GetOrders\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Orders] GetOrders(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:33:35.297 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:33:35.304 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:33:35.483 +05:30 [Information] Executed DbCommand ("66"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[Id], [o].[CustomerId], [o].[DateCreated], [o].[TotalAmount]
+FROM [Orders] AS [o]
+INNER JOIN [Customers] AS [c] ON [o].[CustomerId] = [c].[Id]
+WHERE [c].[Id] = @__customerId_0"
+2020-07-29 12:33:35.558 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Orders, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:33:35.574 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)" in 284.3501ms
+2020-07-29 12:33:35.579 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 12:33:35.586 +05:30 [Information] Request finished in 309.2414ms 200 application/json; charset=utf-8
+2020-07-29 12:33:39.833 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 12:33:39.833 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:39.833 +05:30 [Information] Request finished in 1.0593ms 204 
+2020-07-29 12:33:39.837 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 12:33:39.837 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:39.839 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:33:39.839 +05:30 [Information] Authorization was successful.
+2020-07-29 12:33:39.840 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:39.844 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:33:40.015 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:33:40.107 +05:30 [Information] Executed DbCommand ("74"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 12:33:40.181 +05:30 [Information] Executed DbCommand ("26"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:40.197 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:40.199 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:40.200 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:33:40.210 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 365.5602ms
+2020-07-29 12:33:40.210 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:40.210 +05:30 [Information] Request finished in 373.5412ms 200 application/json; charset=utf-8
+2020-07-29 12:33:43.642 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 12:33:43.646 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:43.648 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:33:43.649 +05:30 [Information] Authorization was successful.
+2020-07-29 12:33:43.649 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:43.649 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:33:43.653 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:33:43.657 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 12:33:43.661 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:43.664 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:43.664 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:33:43.666 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 16.276ms
+2020-07-29 12:33:43.666 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:43.666 +05:30 [Information] Request finished in 24.5301ms 200 application/json; charset=utf-8
+2020-07-29 12:33:47.431 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 12:33:47.431 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:47.431 +05:30 [Information] Request finished in 0.6766ms 204 
+2020-07-29 12:33:47.434 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 12:33:47.435 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:47.436 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:33:47.437 +05:30 [Information] Authorization was successful.
+2020-07-29 12:33:47.437 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:47.437 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:33:47.443 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:33:47.447 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 12:33:47.453 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:47.456 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 12:33:47.457 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:33:47.459 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 21.8636ms
+2020-07-29 12:33:47.459 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 12:33:47.460 +05:30 [Information] Request finished in 25.3077ms 200 application/json; charset=utf-8
+2020-07-29 12:33:51.205 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 12:33:51.205 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:51.206 +05:30 [Information] Request finished in 0.9736ms 204 
+2020-07-29 12:33:51.214 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:33:51.214 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:33:51.216 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:33:51.217 +05:30 [Information] Authorization was successful.
+2020-07-29 12:33:51.217 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:33:51.217 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:33:51.221 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:33:51.229 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:33:51.233 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:33:51.234 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:33:51.236 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 18.1311ms
+2020-07-29 12:33:51.236 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:33:51.236 +05:30 [Information] Request finished in 22.4566ms 200 application/json; charset=utf-8
+2020-07-29 12:34:23.711 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 12:34:23.713 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:23.718 +05:30 [Information] Request finished in 6.8728ms 204 
+2020-07-29 12:34:23.722 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:34:23.723 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:23.725 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:34:23.726 +05:30 [Information] Authorization was successful.
+2020-07-29 12:34:23.726 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:23.727 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:34:23.734 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:34:23.742 +05:30 [Information] Executed DbCommand ("6"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:34:23.747 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:34:23.749 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:34:23.750 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 22.6723ms
+2020-07-29 12:34:23.752 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:23.771 +05:30 [Information] Request finished in 30.7887ms 200 application/json; charset=utf-8
+2020-07-29 12:34:27.403 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:34:27.403 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:27.406 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:34:27.407 +05:30 [Information] Authorization was successful.
+2020-07-29 12:34:27.407 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:27.408 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:34:27.413 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:34:27.420 +05:30 [Information] Executed DbCommand ("5"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:34:27.425 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:34:27.426 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:34:27.428 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 19.9111ms
+2020-07-29 12:34:27.428 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:27.429 +05:30 [Information] Request finished in 25.6647ms 200 application/json; charset=utf-8
+2020-07-29 12:34:31.365 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 12:34:31.365 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:31.365 +05:30 [Information] Request finished in 0.8375ms 204 
+2020-07-29 12:34:31.370 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:34:31.370 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:31.372 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:34:31.372 +05:30 [Information] Authorization was successful.
+2020-07-29 12:34:31.373 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:31.373 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:34:31.376 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:34:31.382 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:34:31.385 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:34:31.386 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:34:31.387 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 14.1366ms
+2020-07-29 12:34:31.387 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:31.388 +05:30 [Information] Request finished in 17.6042ms 200 application/json; charset=utf-8
+2020-07-29 12:34:33.939 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 12:34:33.940 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:33.942 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:34:33.943 +05:30 [Information] Authorization was successful.
+2020-07-29 12:34:33.943 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:33.943 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:34:33.947 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:34:33.953 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:34:33.960 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 12:34:33.961 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 12:34:33.963 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 19.6392ms
+2020-07-29 12:34:33.963 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 12:34:33.964 +05:30 [Information] Request finished in 24.2354ms 200 application/json; charset=utf-8
+2020-07-29 12:34:37.157 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/logout  
+2020-07-29 12:34:37.157 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:37.158 +05:30 [Information] Request finished in 0.5896ms 204 
+2020-07-29 12:34:37.161 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/logout application/json 104
+2020-07-29 12:34:37.161 +05:30 [Information] CORS policy execution successful.
+2020-07-29 12:34:37.163 +05:30 [Information] Successfully validated the token.
+2020-07-29 12:34:37.164 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)"'
+2020-07-29 12:34:37.168 +05:30 [Information] Route matched with "{action = \"LogOutCustomer\", controller = \"Accounts\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] LogOutCustomer(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 12:34:37.172 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 12:34:37.176 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 12:34:37.184 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 30), @p4='?' (Size = 4000), @p5='?' (Size = 10), @p6='?' (DbType = DateTime2), @p7='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Customers] SET [Address] = @p0, [Email] = @p1, [LoginStatus] = @p2, [Name] = @p3, [Password] = @p4, [Phone] = @p5, [RegisterDate] = @p6, [UserName] = @p7
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;"
+2020-07-29 12:34:37.213 +05:30 [Information] Executing ObjectResult, writing value of type '"System.String"'.
+2020-07-29 12:34:37.244 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)" in 75.7321ms
+2020-07-29 12:34:37.244 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)"'
+2020-07-29 12:34:37.256 +05:30 [Information] Request finished in 94.8446ms 200 text/plain; charset=utf-8
+2020-07-29 20:58:14.752 +05:30 [Information] User profile is available. Using '"C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2020-07-29 20:58:22.832 +05:30 [Information] Application started. Press Ctrl+C to shut down.
+2020-07-29 20:58:22.833 +05:30 [Information] Hosting environment: "Development"
+2020-07-29 20:58:22.833 +05:30 [Information] Content root path: "D:\Office\ShoppingCart_BookStore\ShoppingCartApp"
+2020-07-29 20:58:23.286 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 20:58:24.670 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:58:24.880 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 20:58:26.587 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 20:58:29.392 +05:30 [Warning] No type was specified for the decimal column '"UnitCost"' on entity type '"OrderDetails"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 20:58:29.392 +05:30 [Warning] No type was specified for the decimal column '"TotalAmount"' on entity type '"Orders"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 20:58:29.392 +05:30 [Warning] No type was specified for the decimal column '"PaymentAmount"' on entity type '"Payments"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 20:58:29.393 +05:30 [Warning] No type was specified for the decimal column '"Price"' on entity type '"Books"'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'.
+2020-07-29 20:58:29.606 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:58:38.748 +05:30 [Information] Executed DbCommand ("398"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 20:58:39.001 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:58:40.186 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 15287.479ms
+2020-07-29 20:58:40.191 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:58:40.240 +05:30 [Information] Request finished in 16955.3502ms 200 application/json; charset=utf-8
+2020-07-29 20:58:45.108 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/favicon.ico  
+2020-07-29 20:58:46.317 +05:30 [Information] Request finished in 1210.5934ms 404 
+2020-07-29 20:59:00.726 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 20:59:00.749 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:00.888 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:00.891 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 20:59:00.896 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 20:59:01.023 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:01.077 +05:30 [Information] Executed DbCommand ("46"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 20:59:01.082 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:59:01.108 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 216.579ms
+2020-07-29 20:59:01.109 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:01.116 +05:30 [Information] Request finished in 385.1106ms 200 application/json; charset=utf-8
+2020-07-29 20:59:01.178 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 20:59:01.178 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:01.179 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:01.180 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 20:59:01.196 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 20:59:01.221 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:01.228 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 20:59:01.229 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:59:01.230 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 49.7414ms
+2020-07-29 20:59:01.230 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:01.231 +05:30 [Information] Request finished in 53.1819ms 200 application/json; charset=utf-8
+2020-07-29 20:59:14.408 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/login  
+2020-07-29 20:59:14.409 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:14.410 +05:30 [Information] Request finished in 2.577ms 204 
+2020-07-29 20:59:14.414 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/login application/json 44
+2020-07-29 20:59:14.414 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:14.416 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)"'
+2020-07-29 20:59:14.560 +05:30 [Information] Route matched with "{action = \"Login\", controller = \"Accounts\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Login(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 20:59:15.064 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:15.636 +05:30 [Information] Executed DbCommand ("206"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 20:59:17.217 +05:30 [Information] Executed DbCommand ("225"ms) [Parameters=["@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 30), @p4='?' (Size = 4000), @p5='?' (Size = 10), @p6='?' (DbType = DateTime2), @p7='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Customers] SET [Address] = @p0, [Email] = @p1, [LoginStatus] = @p2, [Name] = @p3, [Password] = @p4, [Phone] = @p5, [RegisterDate] = @p6, [UserName] = @p7
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;"
+2020-07-29 20:59:17.302 +05:30 [Information] Executing ObjectResult, writing value of type '"ShoppingCartApp.Domain.IServices.Responses.TokenResponse"'.
+2020-07-29 20:59:17.413 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)" in 2852.1667ms
+2020-07-29 20:59:17.413 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.Login (ShoppingCartApp)"'
+2020-07-29 20:59:17.414 +05:30 [Information] Request finished in 2999.5375ms 200 application/json; charset=utf-8
+2020-07-29 20:59:17.437 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/products  
+2020-07-29 20:59:17.438 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:17.438 +05:30 [Information] Request finished in 1.1517ms 204 
+2020-07-29 20:59:17.444 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 20:59:17.444 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:17.733 +05:30 [Information] Successfully validated the token.
+2020-07-29 20:59:17.749 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:17.750 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 20:59:17.750 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 20:59:17.751 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:17.756 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 20:59:17.757 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:59:17.757 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 7.6827ms
+2020-07-29 20:59:17.757 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 20:59:17.758 +05:30 [Information] Request finished in 313.9477ms 200 application/json; charset=utf-8
+2020-07-29 20:59:44.259 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orders  
+2020-07-29 20:59:44.265 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:44.268 +05:30 [Information] Request finished in 9.7577ms 204 
+2020-07-29 20:59:44.278 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orders application/json 104
+2020-07-29 20:59:44.278 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:44.322 +05:30 [Information] Successfully validated the token.
+2020-07-29 20:59:44.332 +05:30 [Information] Authorization was successful.
+2020-07-29 20:59:44.333 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 20:59:44.337 +05:30 [Information] Route matched with "{action = \"GetOrders\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Orders] GetOrders(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 20:59:44.351 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:44.371 +05:30 [Information] Executed DbCommand ("13"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 20:59:44.585 +05:30 [Information] Executed DbCommand ("61"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[Id], [o].[CustomerId], [o].[DateCreated], [o].[TotalAmount]
+FROM [Orders] AS [o]
+INNER JOIN [Customers] AS [c] ON [o].[CustomerId] = [c].[Id]
+WHERE [c].[Id] = @__customerId_0"
+2020-07-29 20:59:44.712 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Orders, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:59:44.743 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)" in 405.5237ms
+2020-07-29 20:59:44.744 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 20:59:44.744 +05:30 [Information] Request finished in 470.1106ms 200 application/json; charset=utf-8
+2020-07-29 20:59:47.887 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 20:59:47.891 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:47.892 +05:30 [Information] Request finished in 4.9757ms 204 
+2020-07-29 20:59:47.897 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 20:59:47.898 +05:30 [Information] CORS policy execution successful.
+2020-07-29 20:59:47.900 +05:30 [Information] Successfully validated the token.
+2020-07-29 20:59:47.901 +05:30 [Information] Authorization was successful.
+2020-07-29 20:59:47.901 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 20:59:47.904 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 20:59:48.078 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 20:59:48.097 +05:30 [Information] Executed DbCommand ("9"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 20:59:48.130 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 20:59:48.143 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 20:59:48.144 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 20:59:48.145 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 20:59:48.146 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 20:59:48.151 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 246.9532ms
+2020-07-29 20:59:48.152 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 20:59:48.152 +05:30 [Information] Request finished in 255.6345ms 200 application/json; charset=utf-8
+2020-07-29 21:00:04.306 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:00:04.306 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:04.307 +05:30 [Information] Request finished in 1.4222ms 204 
+2020-07-29 21:00:04.311 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:04.311 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:04.313 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:04.315 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:04.315 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:04.316 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:04.319 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:04.323 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:04.327 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:04.329 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:04.330 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:04.331 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:04.331 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:04.332 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 16.5821ms
+2020-07-29 21:00:04.333 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:04.333 +05:30 [Information] Request finished in 22.3837ms 200 application/json; charset=utf-8
+2020-07-29 21:00:20.639 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:00:20.640 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:20.640 +05:30 [Information] Request finished in 1.8993ms 204 
+2020-07-29 21:00:20.644 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:20.645 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:20.647 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:20.648 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:20.648 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:20.649 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:20.655 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:20.660 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:20.668 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:20.672 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:20.673 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:20.675 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 25.7617ms
+2020-07-29 21:00:20.675 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:20.676 +05:30 [Information] Request finished in 31.6185ms 200 application/json; charset=utf-8
+2020-07-29 21:00:24.731 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:24.732 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:24.733 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:24.734 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:24.734 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:24.735 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:24.740 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:24.744 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:24.745 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:24.746 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:24.747 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:24.748 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 13.2788ms
+2020-07-29 21:00:24.748 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:24.750 +05:30 [Information] Request finished in 18.8168ms 200 application/json; charset=utf-8
+2020-07-29 21:00:29.350 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:00:29.350 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:29.351 +05:30 [Information] Request finished in 1.2715ms 204 
+2020-07-29 21:00:29.355 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:29.355 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:29.356 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:29.357 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:29.357 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:29.358 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:29.362 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:29.365 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:29.368 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:29.370 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:29.371 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:29.373 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 14.8171ms
+2020-07-29 21:00:29.373 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:29.373 +05:30 [Information] Request finished in 18.939ms 200 application/json; charset=utf-8
+2020-07-29 21:00:42.966 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:00:42.967 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:42.967 +05:30 [Information] Request finished in 1.2136ms 204 
+2020-07-29 21:00:42.971 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:42.971 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:42.973 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:42.974 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:42.974 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:42.974 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:42.978 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:42.980 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:42.981 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:42.982 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:42.983 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:42.984 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 9.2719ms
+2020-07-29 21:00:42.984 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:42.984 +05:30 [Information] Request finished in 13.053ms 200 application/json; charset=utf-8
+2020-07-29 21:00:59.158 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:00:59.158 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:59.159 +05:30 [Information] Request finished in 0.9925ms 204 
+2020-07-29 21:00:59.162 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:00:59.163 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:00:59.165 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:00:59.166 +05:30 [Information] Authorization was successful.
+2020-07-29 21:00:59.166 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:59.166 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:00:59.171 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:00:59.174 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:00:59.178 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:59.181 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:59.184 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:59.186 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:00:59.187 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:00:59.190 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 23.1242ms
+2020-07-29 21:00:59.191 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:00:59.195 +05:30 [Information] Request finished in 32.8818ms 200 application/json; charset=utf-8
+2020-07-29 21:01:14.747 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 21:01:14.747 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:14.748 +05:30 [Information] Request finished in 0.9369ms 204 
+2020-07-29 21:01:14.756 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 21:01:14.756 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:14.761 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:14.762 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:14.762 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:01:14.767 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:14.775 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:14.779 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:01:14.838 +05:30 [Information] Executed DbCommand ("40"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 21:01:14.870 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:14.895 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 128.3287ms
+2020-07-29 21:01:14.896 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:01:14.896 +05:30 [Information] Request finished in 142.0468ms 200 application/json; charset=utf-8
+2020-07-29 21:01:20.687 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orders  
+2020-07-29 21:01:20.687 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:20.688 +05:30 [Information] Request finished in 1.1122ms 204 
+2020-07-29 21:01:20.693 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orders application/json 104
+2020-07-29 21:01:20.693 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:20.694 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:20.695 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:20.695 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:01:20.695 +05:30 [Information] Route matched with "{action = \"GetOrders\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Orders] GetOrders(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:20.698 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:20.701 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:01:20.709 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[Id], [o].[CustomerId], [o].[DateCreated], [o].[TotalAmount]
+FROM [Orders] AS [o]
+INNER JOIN [Customers] AS [c] ON [o].[CustomerId] = [c].[Id]
+WHERE [c].[Id] = @__customerId_0"
+2020-07-29 21:01:20.710 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Orders, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:20.711 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)" in 16.0589ms
+2020-07-29 21:01:20.712 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:01:20.712 +05:30 [Information] Request finished in 19.3246ms 200 application/json; charset=utf-8
+2020-07-29 21:01:25.036 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 21:01:25.036 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:25.037 +05:30 [Information] Request finished in 0.8535ms 204 
+2020-07-29 21:01:25.040 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 21:01:25.041 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:25.042 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:25.043 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:25.043 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:01:25.043 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:25.045 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:25.047 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:01:25.049 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 21:01:25.050 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:25.053 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 9.5158ms
+2020-07-29 21:01:25.053 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:01:25.054 +05:30 [Information] Request finished in 13.329ms 200 application/json; charset=utf-8
+2020-07-29 21:01:37.613 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orders  
+2020-07-29 21:01:37.614 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:37.614 +05:30 [Information] Request finished in 0.9067ms 204 
+2020-07-29 21:01:37.620 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orders application/json 104
+2020-07-29 21:01:37.620 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:37.622 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:37.623 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:37.623 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:01:37.623 +05:30 [Information] Route matched with "{action = \"GetOrders\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Orders] GetOrders(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:37.626 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:37.628 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:01:37.630 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[Id], [o].[CustomerId], [o].[DateCreated], [o].[TotalAmount]
+FROM [Orders] AS [o]
+INNER JOIN [Customers] AS [c] ON [o].[CustomerId] = [c].[Id]
+WHERE [c].[Id] = @__customerId_0"
+2020-07-29 21:01:37.632 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Orders, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:37.636 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)" in 12.8858ms
+2020-07-29 21:01:37.637 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:01:37.637 +05:30 [Information] Request finished in 17.8316ms 200 application/json; charset=utf-8
+2020-07-29 21:01:45.019 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:01:45.020 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:45.021 +05:30 [Information] Request finished in 1.7502ms 204 
+2020-07-29 21:01:45.025 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:01:45.025 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:45.026 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:45.026 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:45.027 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:45.027 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:45.029 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:45.033 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:01:45.036 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:45.037 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:45.037 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:45.038 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 11.3391ms
+2020-07-29 21:01:45.038 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:45.039 +05:30 [Information] Request finished in 14.0209ms 200 application/json; charset=utf-8
+2020-07-29 21:01:51.234 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:01:51.234 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:51.234 +05:30 [Information] Request finished in 0.7569ms 204 
+2020-07-29 21:01:51.238 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:01:51.238 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:51.239 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:51.240 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:51.240 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:51.240 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:51.243 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:51.244 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:01:51.246 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:51.247 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:51.247 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:51.248 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 7.6423ms
+2020-07-29 21:01:51.248 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:51.249 +05:30 [Information] Request finished in 10.7281ms 200 application/json; charset=utf-8
+2020-07-29 21:01:53.205 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:01:53.206 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:53.207 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:53.208 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:53.208 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:53.208 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:53.211 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:53.213 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:01:53.214 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:53.215 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:53.216 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:53.216 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:53.217 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 8.4884ms
+2020-07-29 21:01:53.217 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:53.217 +05:30 [Information] Request finished in 11.843ms 200 application/json; charset=utf-8
+2020-07-29 21:01:56.457 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:01:56.458 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:56.458 +05:30 [Information] Request finished in 0.5963ms 204 
+2020-07-29 21:01:56.461 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:01:56.461 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:01:56.462 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:01:56.463 +05:30 [Information] Authorization was successful.
+2020-07-29 21:01:56.463 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:56.464 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:01:56.466 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:01:56.467 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:01:56.468 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:56.469 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:56.470 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:56.471 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:01:56.471 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:01:56.472 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 8.0195ms
+2020-07-29 21:01:56.472 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:01:56.472 +05:30 [Information] Request finished in 11.0661ms 200 application/json; charset=utf-8
+2020-07-29 21:02:05.796 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 21:02:05.796 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:05.797 +05:30 [Information] Request finished in 0.7137ms 204 
+2020-07-29 21:02:05.801 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 21:02:05.801 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:05.802 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:02:05.803 +05:30 [Information] Authorization was successful.
+2020-07-29 21:02:05.803 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:05.803 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:02:05.805 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:02:05.806 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:02:05.807 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 21:02:05.807 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:02:05.808 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 5.1335ms
+2020-07-29 21:02:05.809 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:05.809 +05:30 [Information] Request finished in 7.8533ms 200 application/json; charset=utf-8
+2020-07-29 21:02:14.023 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orders  
+2020-07-29 21:02:14.023 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:14.024 +05:30 [Information] Request finished in 0.5408ms 204 
+2020-07-29 21:02:14.027 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orders application/json 104
+2020-07-29 21:02:14.027 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:14.029 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:02:14.029 +05:30 [Information] Authorization was successful.
+2020-07-29 21:02:14.029 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:02:14.029 +05:30 [Information] Route matched with "{action = \"GetOrders\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Orders] GetOrders(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:02:14.034 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:02:14.037 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:02:14.040 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__customerId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[Id], [o].[CustomerId], [o].[DateCreated], [o].[TotalAmount]
+FROM [Orders] AS [o]
+INNER JOIN [Customers] AS [c] ON [o].[CustomerId] = [c].[Id]
+WHERE [c].[Id] = @__customerId_0"
+2020-07-29 21:02:14.041 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Orders, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:02:14.042 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)" in 12.6393ms
+2020-07-29 21:02:14.042 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrders (ShoppingCartApp)"'
+2020-07-29 21:02:14.042 +05:30 [Information] Request finished in 15.6573ms 200 application/json; charset=utf-8
+2020-07-29 21:02:16.323 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/orderDetails  
+2020-07-29 21:02:16.323 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:16.323 +05:30 [Information] Request finished in 0.551ms 204 
+2020-07-29 21:02:16.326 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/orderDetails application/json 336
+2020-07-29 21:02:16.326 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:16.328 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:02:16.329 +05:30 [Information] Authorization was successful.
+2020-07-29 21:02:16.329 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:02:16.329 +05:30 [Information] Route matched with "{action = \"GetOrderDetails\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.DTOs.ItemDetails] GetOrderDetails(ShoppingCartApp.Domain.Models.Orders)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:02:16.331 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:02:16.335 +05:30 [Information] Executed DbCommand ("4"ms) [Parameters=["@__orderId_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [o].[OrderId], [o].[BookId], [o].[Quantity], [o].[UnitCost]
+FROM [OrderDetails] AS [o]
+WHERE [o].[OrderId] = @__orderId_0"
+2020-07-29 21:02:16.338 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:02:16.340 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:02:16.341 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__Id_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]
+WHERE [b].[Id] = @__Id_0"
+2020-07-29 21:02:16.341 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.DTOs.ItemDetails, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:02:16.342 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)" in 12.8323ms
+2020-07-29 21:02:16.342 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetOrderDetails (ShoppingCartApp)"'
+2020-07-29 21:02:16.342 +05:30 [Information] Request finished in 15.817ms 200 application/json; charset=utf-8
+2020-07-29 21:02:20.673 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 21:02:20.673 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:20.673 +05:30 [Information] Request finished in 0.4707ms 204 
+2020-07-29 21:02:20.677 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 21:02:20.677 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:20.679 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:02:20.680 +05:30 [Information] Authorization was successful.
+2020-07-29 21:02:20.680 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:20.681 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:02:20.685 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:02:20.721 +05:30 [Information] Executed DbCommand ("36"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:02:20.724 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 21:02:20.725 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:02:20.725 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 44.018ms
+2020-07-29 21:02:20.726 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:20.726 +05:30 [Information] Request finished in 48.7904ms 200 application/json; charset=utf-8
+2020-07-29 21:02:49.137 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/payments  
+2020-07-29 21:02:49.137 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:49.137 +05:30 [Information] Request finished in 0.3146ms 204 
+2020-07-29 21:02:49.144 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/payments application/json 104
+2020-07-29 21:02:49.145 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:02:49.153 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:02:49.154 +05:30 [Information] Authorization was successful.
+2020-07-29 21:02:49.154 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:49.154 +05:30 [Information] Route matched with "{action = \"GetPayments\", controller = \"Accounts\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Domain.Models.Payments] GetPayments(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:02:49.156 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:02:49.158 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:02:49.159 +05:30 [Information] Executed DbCommand ("0"ms) [Parameters=["@__customerName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[CustomerName], [p].[OrderID], [p].[PaymentAmount], [p].[PaymentDate], [p].[PaymentMethod]
+FROM [Payments] AS [p]
+WHERE [p].[CustomerName] = @__customerName_0"
+2020-07-29 21:02:49.160 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Domain.Models.Payments, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:02:49.160 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)" in 6.2119ms
+2020-07-29 21:02:49.160 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.GetPayments (ShoppingCartApp)"'
+2020-07-29 21:02:49.162 +05:30 [Information] Request finished in 16.531ms 200 application/json; charset=utf-8
+2020-07-29 21:03:06.150 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/products  
+2020-07-29 21:03:06.150 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:06.151 +05:30 [Information] Request finished in 0.9121ms 204 
+2020-07-29 21:03:06.157 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 21:03:06.157 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:06.161 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:03:06.161 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:06.161 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 21:03:06.162 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 21:03:06.164 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:03:06.169 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 21:03:06.170 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:03:06.171 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 9.6745ms
+2020-07-29 21:03:06.171 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:06.174 +05:30 [Information] Request finished in 16.6443ms 200 application/json; charset=utf-8
+2020-07-29 21:03:06.185 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 21:03:06.185 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:06.185 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:03:06.186 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:06.186 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 21:03:06.186 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 21:03:06.187 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:03:06.188 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 21:03:06.188 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:03:06.190 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 3.902ms
+2020-07-29 21:03:06.190 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:06.190 +05:30 [Information] Request finished in 5.6636ms 200 application/json; charset=utf-8
+2020-07-29 21:03:53.624 +05:30 [Information] Request starting HTTP/2.0 OPTIONS https://localhost:44360/api/accounts/logout  
+2020-07-29 21:03:53.624 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:53.626 +05:30 [Information] Request finished in 2.0993ms 204 
+2020-07-29 21:03:53.631 +05:30 [Information] Request starting HTTP/2.0 POST https://localhost:44360/api/accounts/logout application/json 104
+2020-07-29 21:03:53.631 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:53.632 +05:30 [Information] Successfully validated the token.
+2020-07-29 21:03:53.632 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)"'
+2020-07-29 21:03:53.636 +05:30 [Information] Route matched with "{action = \"LogOutCustomer\", controller = \"Accounts\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[System.String] LogOutCustomer(ShoppingCartApp.Domain.Models.UserCredentials)" on controller "ShoppingCartApp.Controllers.AccountsController" ("ShoppingCartApp").
+2020-07-29 21:03:53.639 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:03:53.642 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@__userName_0='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [c].[Id], [c].[Address], [c].[Email], [c].[LoginStatus], [c].[Name], [c].[Password], [c].[Phone], [c].[RegisterDate], [c].[UserName]
+FROM [Customers] AS [c]
+WHERE [c].[UserName] = @__userName_0"
+2020-07-29 21:03:53.648 +05:30 [Information] Executed DbCommand ("3"ms) [Parameters=["@p8='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = Boolean), @p3='?' (Size = 30), @p4='?' (Size = 4000), @p5='?' (Size = 10), @p6='?' (DbType = DateTime2), @p7='?' (Size = 20)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+UPDATE [Customers] SET [Address] = @p0, [Email] = @p1, [LoginStatus] = @p2, [Name] = @p3, [Password] = @p4, [Phone] = @p5, [RegisterDate] = @p6, [UserName] = @p7
+WHERE [Id] = @p8;
+SELECT @@ROWCOUNT;"
+2020-07-29 21:03:53.661 +05:30 [Information] Executing ObjectResult, writing value of type '"System.String"'.
+2020-07-29 21:03:53.700 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)" in 63.3182ms
+2020-07-29 21:03:53.700 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.AccountsController.LogOutCustomer (ShoppingCartApp)"'
+2020-07-29 21:03:53.704 +05:30 [Information] Request finished in 74.0076ms 200 text/plain; charset=utf-8
+2020-07-29 21:03:54.641 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 21:03:54.641 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:54.642 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:54.642 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 21:03:54.642 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 21:03:54.643 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:03:54.645 +05:30 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 21:03:54.645 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:03:54.646 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 3.4706ms
+2020-07-29 21:03:54.646 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:54.646 +05:30 [Information] Request finished in 4.8629ms 200 application/json; charset=utf-8
+2020-07-29 21:03:54.672 +05:30 [Information] Request starting HTTP/2.0 GET https://localhost:44360/api/products  
+2020-07-29 21:03:54.672 +05:30 [Information] CORS policy execution successful.
+2020-07-29 21:03:54.672 +05:30 [Information] Executing endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:54.672 +05:30 [Information] Route matched with "{action = \"GetAllProducts\", controller = \"Products\"}". Executing controller action with signature "System.Collections.Generic.IEnumerable`1[ShoppingCartApp.Models.Books] GetAllProducts()" on controller "ShoppingCartApp.Controllers.ProductsController" ("ShoppingCartApp").
+2020-07-29 21:03:54.673 +05:30 [Information] Completed : Getting all Book Products
+2020-07-29 21:03:54.673 +05:30 [Information] Entity Framework Core "3.1.4" initialized '"ShoppingCartContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2020-07-29 21:03:54.675 +05:30 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [b].[Id], [b].[Author], [b].[Image], [b].[Name], [b].[Price], [b].[Stock], [b].[Type]
+FROM [Books] AS [b]"
+2020-07-29 21:03:54.675 +05:30 [Information] Executing ObjectResult, writing value of type '"System.Collections.Generic.List`1[[ShoppingCartApp.Models.Books, ShoppingCartApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2020-07-29 21:03:54.676 +05:30 [Information] Executed action "ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)" in 3.2446ms
+2020-07-29 21:03:54.676 +05:30 [Information] Executed endpoint '"ShoppingCartApp.Controllers.ProductsController.GetAllProducts (ShoppingCartApp)"'
+2020-07-29 21:03:54.676 +05:30 [Information] Request finished in 4.3466ms 200 application/json; charset=utf-8

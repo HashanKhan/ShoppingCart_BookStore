@@ -19,12 +19,12 @@ export class CheckOutModalComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // Call the checkout method in the shoppingCart service.
+  //Call the checkout method in the shoppingCart service.
   confirmOrder(){
     this.shoppingCartService.checkout();
   }
 
-  // Navigate to the Login.
+  //Navigate to the Login.
   navigateToLogin(){
     this.dialogRef.close();
     this.router.navigate(['/account/login']);

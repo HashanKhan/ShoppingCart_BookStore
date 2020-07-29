@@ -2,6 +2,7 @@
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Models;
 using ShoppingCartApp.Domain.Security.Hashing;
+using System.Collections.Generic;
 
 namespace ShoppingCartApp.Services
 {
@@ -62,6 +63,30 @@ namespace ShoppingCartApp.Services
                 _accountRepository.UpdateLoginStatus(customer);
 
                 return "You have been Logged Out Successfully.";
+        }
+
+        //Get Orders by the Customer Id.
+        public IEnumerable<Orders> GetOrdersByCustomerId(int customerId)
+        {
+            var orders = _accountRepository.GetOrdersByCustomerId(customerId);
+
+            return orders;
+        }
+
+        //Gat OrderDetails by Order Id. 
+        public IEnumerable<OrderDetails> GetOrderDetailsByOrderId(int orderId)
+        {
+            var orderDetails = _accountRepository.GetOrderDetailsByOrderId(orderId);
+
+            return orderDetails;
+        }
+
+        //Get Payments by the Customer Name.
+        public IEnumerable<Payments> GetPaymentsByCustomerName(string customerName)
+        {
+            var payments = _accountRepository.GetPaymentsByCustomerName(customerName);
+
+            return payments;
         }
     }
 }

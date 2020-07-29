@@ -84,22 +84,22 @@ export class ShoppingCartService {
     this.apiUrl = environment.BaseUrl;
   }
 
-  // Get all books method.
+  //Get all books method.
   getBooks(): Observable<Books[]>{
     return this.http.get<Books[]>(this.apiUrl + "products");
   }
 
-  // Add books to cart method.
+  //Add books to cart method.
   addCartItem(item: CartItem) {
     this.cartAdd.next({ ...item, uuid: uuid() });
   }
 
-  // Remove books from cart method.
+  //Remove books from cart method.
   removeCartItem(item: CartItem) {
     this.cartRemove.next({ ...item, remove: true });
   }
 
-  // Trigger the checkout.
+  //Trigger the checkout.
   checkout() {
     this.checkoutTrigger.next(true);
   }
@@ -112,7 +112,7 @@ export class ShoppingCartService {
     );
   }
 
-  // Open Payment Modal method.
+  //Open Payment Modal method.
   openPaymentModal(state: StateTree){
     const dialogRef = this.dialog.open(PaymentConfirmationModalComponent, {
       width: '600px',
@@ -126,12 +126,12 @@ export class ShoppingCartService {
     });
   }
 
-  // Retrieving error response mrthod.
+  //Retrieving error response mrthod.
   getErrorResponse(){
     return sessionStorage.getItem('error_res');
   }
 
-  // Error handler.
+  //Error handler.
 private handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {
     console.error('An error occurred:', error.error.message);
