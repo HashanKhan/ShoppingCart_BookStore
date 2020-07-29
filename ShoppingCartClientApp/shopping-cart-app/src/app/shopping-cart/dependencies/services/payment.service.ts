@@ -15,7 +15,7 @@ export class PaymentService {
     this.apiUrl = environment.BaseUrl;
   }
 
-  // Complete payment and purchase items.
+  //Complete payment and purchase items.
   completePayment(paymentDetails: PaymentDetails): Observable<string>{
     return this.http.post(this.apiUrl + "payments/", paymentDetails, {responseType: 'text'}
     ).pipe(
@@ -23,7 +23,7 @@ export class PaymentService {
     );
   }
 
-  // Error handler.
+  //Error handler.
 private handleError(error: HttpErrorResponse) {
   if (error.error instanceof ErrorEvent) {
     console.error('An error occurred:', error.error.message);

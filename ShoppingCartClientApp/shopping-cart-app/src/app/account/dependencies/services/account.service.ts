@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
 import { catchError } from 'rxjs/operators';
 import { UserCredentials } from '../models/userCredentials';
 import { TokenResponse } from '../models/tokenResponse';
+import { Orders } from '../models/orders';
+import { ItemDetails } from '../models/itemDetails';
+import { Payments } from '../models/payments';
 
 
 @Injectable({
@@ -18,7 +21,7 @@ export class AccountService {
     this.apiUrl = environment.BaseUrl;
   }
 
-// Customer registration method.  
+//Customer registration method.  
 registerCustomer(customer: Customers): Observable<string> {
   return this.http.post(this.apiUrl + "accounts/" + "register", customer, {responseType: 'text'}
   ).pipe(
@@ -26,17 +29,41 @@ registerCustomer(customer: Customers): Observable<string> {
   );
 }
 
-// Customer login method.
+//Customer login method.
 loginCustomer(userCredentials: UserCredentials): Observable<TokenResponse> {
   return this.http.post<TokenResponse>(this.apiUrl + "accounts/" + "login", userCredentials)
   .pipe(catchError(this.handleError)
   );
 }
 
-// Customer logout method.
+//Customer logout method.
 logOutCustomer(userCredentials: UserCredentials): Observable<string> {
   return this.http.post(this.apiUrl + "accounts/" + "logout", userCredentials, {responseType: 'text'}
   ).pipe(
+      catchError(this.handleError)
+  );
+}
+
+//Get Orders method.
+getOrders(userCredentials: UserCredentials): Observable<Orders[]>{
+  return this.http.post<Orders[]>(this.apiUrl + "accounts/" + "orders", userCredentials)
+  .pipe(
+      catchError(this.handleError)
+  );
+}
+
+//Get OrderDetails method.
+getOrderDetails(order: Orders): Observable<ItemDetails[]>{
+  return this.http.post<ItemDetails[]>(this.apiUrl + "accounts/" + "orderDetails", order)
+  .pipe(
+      catchError(this.handleError)
+  );
+}
+
+//Get Payments method.
+getPayments(userCredentials: UserCredentials): Observable<Payments[]>{
+  return this.http.post<Payments[]>(this.apiUrl + "accounts/" + "payments", userCredentials)
+  .pipe(
       catchError(this.handleError)
   );
 }

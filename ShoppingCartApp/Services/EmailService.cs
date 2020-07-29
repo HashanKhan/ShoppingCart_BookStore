@@ -17,7 +17,7 @@ namespace ShoppingCartApp.Services
             _mailSettings = mailSettings.Value;
         }
 
-        // Send Email Bill in Async to client.
+        //Send Email Bill in Async to client.
         public async Task SendEmailAsync(MailRequest mailRequest)
         {
             MailMessage message = new MailMessage();

@@ -22,7 +22,7 @@ export class CartComponent implements OnInit {
     this.shoppingCartService.removeCartItem(item);
   }
 
-  // Open a pop-up for the Checkout.
+  //Open a pop-up for the Checkout.
   openCheckoutModal(){
     const dialogRef = this.dialog.open(CheckOutModalComponent, {
       width: '600px',

@@ -13,7 +13,7 @@ namespace ShoppingCartApp.Services
             this._paymentRepository = paymentRepository;
         }
 
-        // Add Orders.
+        //Add Orders.
         public Orders PlaceOrder(Orders order)
         {
             var result = _paymentRepository.PlaceOrder(order);
@@ -21,7 +21,7 @@ namespace ShoppingCartApp.Services
             return result;
         }
 
-        // Add OrderDetails.
+        //Add OrderDetails.
         public OrderDetails PlaceOrderDetails(OrderDetails orderDetails)
         {
             var result = _paymentRepository.PlaceOrderDetails(orderDetails);
@@ -29,7 +29,7 @@ namespace ShoppingCartApp.Services
             return result;
         }
 
-        // Add Payments.
+        //Add Payments.
         public Payments ConfirmPayment(Payments payment)
         {
             var result = _paymentRepository.ConfirmPayment(payment);

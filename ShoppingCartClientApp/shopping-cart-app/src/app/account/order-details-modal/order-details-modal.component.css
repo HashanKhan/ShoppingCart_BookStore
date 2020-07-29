@@ -1,0 +1,21 @@
+table {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.mat-form-field {
+    font-size: 14px; 
+    width: 90%;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+
+.mat-elevation-z8{
+    margin-top: 1%;
+    width: 100%;
+}
+  
+td, th {
+    width: 5%;
+}

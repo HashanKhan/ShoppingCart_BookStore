@@ -26,7 +26,9 @@
   <mat-sidenav #sidenav>
     <mat-nav-list>
       <div>
-        <a mat-list-item [routerLink]="'/shoppingCart/books'" (click)="sidenav.toggle()"><mat-icon>home</mat-icon>Home</a>
+        <a mat-list-item [routerLink]="'/shoppingCart/books'" (click)="sidenav.toggle()"><mat-icon>home</mat-icon>&nbsp;Home</a>
+        <a mat-list-item [routerLink]="'/account/orders'" (click)="sidenav.toggle()"><mat-icon>grading</mat-icon>&nbsp;Orders</a>
+        <a mat-list-item [routerLink]="'/account/payments'" (click)="sidenav.toggle()"><mat-icon>payments</mat-icon>&nbsp;Payments</a>
       </div>
     </mat-nav-list>
   </mat-sidenav>

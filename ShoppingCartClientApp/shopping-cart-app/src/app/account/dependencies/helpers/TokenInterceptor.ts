@@ -8,9 +8,9 @@ import { environment } from 'src/environments/environment';
 export class TokenInterceptor implements HttpInterceptor {
     constructor(private authenticationService: AuthenticationService) { }
 
-    // Intercepting with all the HTTP requests and adding the followings headers to the requests.
+    //Intercepting with all the HTTP requests and adding the followings headers to the requests.
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        // add auth header with jwt if user is logged in and request is to the api url
+        //add auth header with jwt if user is logged in and request is to the api url
         const currentUser = this.authenticationService.getUserName();
         const currentToken = this.authenticationService.getToken();
         const isLoggedIn = currentUser && currentToken;

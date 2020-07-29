@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using ShoppingCartApp.Domain.DTOs;
 using ShoppingCartApp.Domain.IServices;
 using ShoppingCartApp.Domain.Models;
+using ShoppingCartApp.Domain.Services;
 using ShoppingCartApp.Extensions;
+using System.Collections.Generic;
 
 namespace ShoppingCartApp.Controllers
 {
@@ -14,12 +18,16 @@ namespace ShoppingCartApp.Controllers
 
         private readonly IAccountService _accountService;
 
+        private readonly IProductService _productService;
+
         private readonly IAuthenticationService _authenticationService;
 
-        public AccountsController(ILogger<AccountsController> logger, IAccountService accountService, IAuthenticationService authenticationService)
+        public AccountsController(ILogger<AccountsController> logger, IAccountService accountService, 
+                            IAuthenticationService authenticationService, IProductService productService)
         {
             _logger = logger;
             _accountService = accountService;
+            _productService = productService;
             _authenticationService = authenticationService;
         }
 
@@ -93,6 +101,56 @@ namespace ShoppingCartApp.Controllers
                     return "You have been Logged Out Successfully.";
                 }
             }
+        }
+
+        //Get all the orders that customer has made.
+        [HttpPost("orders")]
+        [Authorize]
+        public IEnumerable<Orders> GetOrders([FromBody] UserCredentials userCredentials)
+        {
+            var customer = _accountService.FindCustomerByUserName(userCredentials.UserName);
+
+            var orders = _accountService.GetOrdersByCustomerId(customer.Id);
+
+            return orders;
+        }
+
+        //Get all the orderDetails for the Orders has made.
+        [HttpPost("orderDetails")]
+        [Authorize]
+        public IEnumerable<ItemDetails> GetOrderDetails([FromBody] Orders order)
+        {
+            var orderDetails = _accountService.GetOrderDetailsByOrderId(order.Id);
+
+            List<ItemDetails> itemDetailsList = new List<ItemDetails>();
+
+            foreach (var od in orderDetails)
+            {
+                var item = _productService.FindBookByID(od.BookId);
+
+                var itemDetail = new ItemDetails()
+                {
+                    Name = item.Name,
+                    Quantity = od.Quantity,
+                    UnitCost = od.UnitCost
+                };
+
+                itemDetailsList.Add(itemDetail);
+            }
+
+            return itemDetailsList;
+        }
+
+        //Get all the Payments made by the Customer.
+        [HttpPost("payments")]
+        [Authorize]
+        public IEnumerable<Payments> GetPayments([FromBody] UserCredentials userCredentials)
+        {
+            var customer = _accountService.FindCustomerByUserName(userCredentials.UserName);
+
+            var payments = _accountService.GetPaymentsByCustomerName(customer.Name);
+
+            return payments;
         }
     }
 }

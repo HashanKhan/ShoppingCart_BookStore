@@ -1,4 +1,5 @@
 ﻿using ShoppingCartApp.Domain.Models;
+using System.Collections.Generic;
 
 namespace ShoppingCartApp.Domain.IRepositories
 {
@@ -9,5 +10,11 @@ namespace ShoppingCartApp.Domain.IRepositories
        Customers FindCustomerByUserName(string userName);
 
        Customers UpdateLoginStatus(Customers customer);
+
+       IEnumerable<Orders> GetOrdersByCustomerId(int customerId);
+
+       IEnumerable<OrderDetails> GetOrderDetailsByOrderId(int orderId);
+
+       IEnumerable<Payments> GetPaymentsByCustomerName(string customerName);
     }
 }

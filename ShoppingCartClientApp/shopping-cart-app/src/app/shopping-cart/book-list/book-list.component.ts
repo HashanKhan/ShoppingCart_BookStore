@@ -24,7 +24,7 @@ export class BookListComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
   constructor(private shoppingCartService: ShoppingCartService) {
-    // Load book products initially.
+    //Load book products initially.
     this.getAllBooks();
   }
 
@@ -42,7 +42,7 @@ export class BookListComponent implements OnInit {
     }
   }
 
-  // Get all books method.
+  //Get all books method.
   getAllBooks(){
     this.shoppingCartService.getBooks().subscribe((res: any[]) => {
       this.books = res;
@@ -58,7 +58,7 @@ export class BookListComponent implements OnInit {
     this.shoppingCartService.addCartItem(item);
   }
 
-  // Clear the search field.
+  //Clear the search field.
   clear(){
     this.value='';
     this.getAllBooks();
